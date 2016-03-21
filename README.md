@@ -5,10 +5,12 @@ Contributions:
 
 Marcus Cruz: XX%
 • Settings screen
+• Design work
+• ???
 
 James Trevino: XX%
 • Majority of the Login screen
-• Settings screen
+• Set up the overall storyboard and Navigation UI
 
 Jason Ngo: XX%
 • Learned the Parse API and set up the backend database
