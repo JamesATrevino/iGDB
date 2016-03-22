@@ -24,6 +24,7 @@
 		7F568C631CA04B4B001E837D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F568C611CA04B4B001E837D /* Main.storyboard */; };
 		7F568C661CA04B4B001E837D /* iGDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7F568C641CA04B4B001E837D /* iGDB.xcdatamodeld */; };
 		7F568C681CA04B4B001E837D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F568C671CA04B4B001E837D /* Assets.xcassets */; };
+		7F6FA9451CA1B01100F37D52 /* LogInRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6FA9441CA1B01100F37D52 /* LogInRegistrationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		7F568C651CA04B4B001E837D /* iGDB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iGDB.xcdatamodel; sourceTree = "<group>"; };
 		7F568C671CA04B4B001E837D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F568C6C1CA04B4B001E837D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F6FA9441CA1B01100F37D52 /* LogInRegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInRegistrationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				7F568C5D1CA04B4B001E837D /* AppDelegate.swift */,
+				7F6FA9441CA1B01100F37D52 /* LogInRegistrationViewController.swift */,
 				7F568C5F1CA04B4B001E837D /* ViewController.swift */,
 				7F568C611CA04B4B001E837D /* Main.storyboard */,
 				7DF48F801CA0CB7C002F8FD4 /* Parse.framework */,
@@ -185,6 +188,7 @@
 				7F568C601CA04B4B001E837D /* ViewController.swift in Sources */,
 				7F568C5E1CA04B4B001E837D /* AppDelegate.swift in Sources */,
 				7F568C661CA04B4B001E837D /* iGDB.xcdatamodeld in Sources */,
+				7F6FA9451CA1B01100F37D52 /* LogInRegistrationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

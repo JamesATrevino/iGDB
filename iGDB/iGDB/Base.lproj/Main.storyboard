@@ -25,7 +25,7 @@
         <!--igDB-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="igDB" id="BYZ-38-t0r" customClass="ViewController" customModule="iGDB" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="igDB" id="BYZ-38-t0r" customClass="LogInRegistrationViewController" customModule="iGDB" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -61,6 +61,7 @@
                                 <rect key="frame" x="188" y="458" width="38" height="30"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
+                                    <action selector="loginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BUD-rB-P7n"/>
                                     <segue destination="iDN-pW-Ds6" kind="show" id="28L-f4-7hD"/>
                                 </connections>
                             </button>
@@ -69,6 +70,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="YJ2-YW-aU1"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="accountTextField" destination="9lE-Uq-Zn5" id="Hs7-IM-IPp"/>
+                        <outlet property="passwordTextField" destination="TRN-7u-P1Z" id="qbM-6R-xYp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -279,7 +284,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fls-7B-Uj8" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="870" y="1353"/>
+            <point key="canvasLocation" x="862" y="1245"/>
         </scene>
         <!--Settings-->
         <scene sceneID="RMo-QB-0Ks">
@@ -540,7 +545,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d0e-y0-meM" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="231" y="1353"/>
+            <point key="canvasLocation" x="231" y="1245"/>
         </scene>
     </scenes>
 </document>
