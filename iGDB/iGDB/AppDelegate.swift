@@ -8,6 +8,8 @@
 
 import UIKit
 import CoreData
+import Parse
+import Bolts
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +19,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        // Initalize Parse.
+        Parse.setApplicationId("wkAyb7v8pUe7D9wQan9206COk8oQOYvX44SxXQAt", clientKey: "TH9mNvM65rgXDOTY0d1klMzcvzNFELRFd5s1Cevr")
+        
+        //Test making an Object
+        var object = PFObject(className: "testDataClass")
+        object.addObject("iOSBlog", forKey: "websiteUrl")
+        object.addObject("Five", forKey: "websiteRating")
+        do {
+            try object.save()
+        }
+        catch {
+            
+        }
+        
         return true
     }
 
