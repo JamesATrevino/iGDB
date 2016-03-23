@@ -9,6 +9,7 @@
 import UIKit
 import Parse
 class GameDetailViewController: UIViewController {
+    
     var game:PFObject?
     @IBOutlet weak var yearLabel: UILabel!
     @IBOutlet weak var platformsLabel: UILabel!
@@ -16,8 +17,10 @@ class GameDetailViewController: UIViewController {
     @IBOutlet weak var studioLabel: UILabel!
     @IBOutlet weak var summaryLabel: UITextView!
     @IBOutlet weak var imageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view.
         let name = game!["name"]
         self.title = name as? String
@@ -25,13 +28,16 @@ class GameDetailViewController: UIViewController {
         platformsLabel.text = game!["platform"] as? String
         let metaCritic = game!["rating"] as? Double
         metacriticLabel.text = "No metacritic data available"
+        
         if metaCritic != nil
         {
             metacriticLabel.text = String(metaCritic!)
         }
+        
         studioLabel.text = game!["developer"] as? String
         summaryLabel.text = game!["Summary"] as? String
         summaryLabel.editable = false
+        
         let url = game!["image"] as? String
         if url != "not set"
         {
