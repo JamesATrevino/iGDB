@@ -24,7 +24,7 @@ class GameDetailViewController: UIViewController {
         yearLabel.text = String(game!["year"] as! Int)
         platformsLabel.text = game!["platform"] as? String
         let metaCritic = game!["rating"] as? Double
-        metacriticLabel.text = "No metacritic data availible"
+        metacriticLabel.text = "No metacritic data available"
         if metaCritic != nil
         {
             metacriticLabel.text = String(metaCritic!)
