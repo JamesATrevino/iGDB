@@ -25,6 +25,8 @@
 		7F568C661CA04B4B001E837D /* iGDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7F568C641CA04B4B001E837D /* iGDB.xcdatamodeld */; };
 		7F568C681CA04B4B001E837D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F568C671CA04B4B001E837D /* Assets.xcassets */; };
 		7F6FA9451CA1B01100F37D52 /* LogInRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6FA9441CA1B01100F37D52 /* LogInRegistrationViewController.swift */; };
+		7F6FA9491CA212FB00F37D52 /* MyTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6FA9481CA212FB00F37D52 /* MyTabBarController.swift */; };
+		7F6FA94B1CA2152600F37D52 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6FA94A1CA2152600F37D52 /* RegistrationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		7F568C671CA04B4B001E837D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F568C6C1CA04B4B001E837D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F6FA9441CA1B01100F37D52 /* LogInRegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInRegistrationViewController.swift; sourceTree = "<group>"; };
+		7F6FA9481CA212FB00F37D52 /* MyTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTabBarController.swift; sourceTree = "<group>"; };
+		7F6FA94A1CA2152600F37D52 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,8 @@
 			children = (
 				7DF48F941CA0CC05002F8FD4 /* libsqlite3.tbd */,
 				7DF48F921CA0CBFA002F8FD4 /* libz.tbd */,
+				7F568C5C1CA04B4B001E837D /* iGDB */,
+				7F568C5B1CA04B4B001E837D /* Products */,
 				7DF48F901CA0CBEF002F8FD4 /* SystemConfiguration.framework */,
 				7DF48F8E1CA0CBE5002F8FD4 /* StoreKit.framework */,
 				7DF48F8C1CA0CBDA002F8FD4 /* Security.framework */,
@@ -86,8 +92,6 @@
 				7DF48F861CA0CBBD002F8FD4 /* CoreGraphics.framework */,
 				7DF48F841CA0CBB4002F8FD4 /* CFNetwork.framework */,
 				7DF48F821CA0CBA9002F8FD4 /* AudioToolbox.framework */,
-				7F568C5C1CA04B4B001E837D /* iGDB */,
-				7F568C5B1CA04B4B001E837D /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,6 +108,8 @@
 			children = (
 				7F568C5D1CA04B4B001E837D /* AppDelegate.swift */,
 				7F6FA9441CA1B01100F37D52 /* LogInRegistrationViewController.swift */,
+				7F6FA94A1CA2152600F37D52 /* RegistrationViewController.swift */,
+				7F6FA9481CA212FB00F37D52 /* MyTabBarController.swift */,
 				7F568C5F1CA04B4B001E837D /* ViewController.swift */,
 				7F568C611CA04B4B001E837D /* Main.storyboard */,
 				7DF48F801CA0CB7C002F8FD4 /* Parse.framework */,
@@ -185,10 +191,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F6FA94B1CA2152600F37D52 /* RegistrationViewController.swift in Sources */,
 				7F568C601CA04B4B001E837D /* ViewController.swift in Sources */,
 				7F568C5E1CA04B4B001E837D /* AppDelegate.swift in Sources */,
 				7F568C661CA04B4B001E837D /* iGDB.xcdatamodeld in Sources */,
 				7F6FA9451CA1B01100F37D52 /* LogInRegistrationViewController.swift in Sources */,
+				7F6FA9491CA212FB00F37D52 /* MyTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,5 +1,5 @@
 //
-//  LogInRegistrationViewController.swift
+//  MyTabBarController.swift
 //  iGDB
 //
 //  Created by James Trevino on 3/22/16.
@@ -8,28 +8,32 @@
 
 import UIKit
 import Parse
-import Bolts
 
-class LogInRegistrationViewController: UIViewController {
+class MyTabBarController: UITabBarController {
 
-    @IBOutlet weak var accountTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-    @IBAction func loginPressed(sender: AnyObject){
-        
+    override func viewWillAppear(animated: Bool) {
+        if (PFUser.currentUser() == nil) {
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                
+                let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Login")
+                self.presentViewController(viewController, animated: true, completion: nil)
+            })
+        }
     }
+
+    
+
     /*
     // MARK: - Navigation
 
