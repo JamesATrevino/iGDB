@@ -18,12 +18,20 @@ class RegistrationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.setNavigationBarHidden(false, animated: true)
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
         // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    //Calls this function when the tap is recognized.
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
     }
     
     @IBAction func registerBtnPressed(sender: AnyObject){
@@ -77,18 +85,10 @@ class RegistrationViewController: UIViewController {
                     let alert = UIAlertController(title: "Success", message:"Signup Successful", preferredStyle: .Alert)
                     alert.addAction(UIAlertAction(title: "OK", style: .Default) { _ in })
                     self.presentViewController(alert, animated: true){}
-                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                        let viewController:MyTabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("TabBarController") as! MyTabBarController
-                        self.presentViewController(viewController, animated: true, completion: nil)
-                    })
                 }
             })
         }
     }
-    
-    @IBAction func unwindToLogInScreen(segue:UIStoryboardSegue) {
-    }
-
     /*
     // MARK: - Navigation
 

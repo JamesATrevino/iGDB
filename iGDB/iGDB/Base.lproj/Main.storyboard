@@ -501,7 +501,7 @@
                                 <rect key="frame" x="344" y="28" width="30" height="30"/>
                                 <state key="normal" title="Exit"/>
                                 <connections>
-                                    <segue destination="nuc-pw-gHw" kind="unwind" unwindAction="unwindToLogInScreen:" id="brp-DZ-tBb"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="tLa-kQ-T8c"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -515,7 +515,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kJL-Bs-nOY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="nuc-pw-gHw" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-491" y="-822"/>
         </scene>
