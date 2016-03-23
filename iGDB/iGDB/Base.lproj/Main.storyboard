@@ -290,7 +290,7 @@
         <!--Settings-->
         <scene sceneID="RMo-QB-0Ks">
             <objects>
-                <tableViewController title="Settings" id="xAn-dw-b4B" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="Settings" title="Settings" id="xAn-dw-b4B" customClass="SettingsTableViewController" customModule="iGDB" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="8k9-hy-70G">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

@@ -28,7 +28,51 @@ class LogInRegistrationViewController: UIViewController {
     
 
     @IBAction func loginPressed(sender: AnyObject){
-        
+        let username = String(self.accountTextField.text!)
+        let password = String(self.passwordTextField.text!)
+        // Validate the text fields
+        if username.characters.count < 5
+        {
+            let alert = UIAlertController(title: "Oops!", message:"Username must be greater than 5 characters", preferredStyle: .Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .Default) { _ in })
+            self.presentViewController(alert, animated: true){}
+        }
+        else if password.characters.count < 5
+        {
+            let alert = UIAlertController(title: "Oops!", message:"Password must be greater than 5 characters", preferredStyle: .Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .Default) { _ in })
+            self.presentViewController(alert, animated: true){}
+            
+        }
+        else
+        {
+            // Run a spinner to show a task in progress
+            let spinner: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0, 0, 150, 150)) as UIActivityIndicatorView
+            spinner.startAnimating()
+            
+            // Send a request to login
+            PFUser.logInWithUsernameInBackground(username, password: password, block: { (user, error) -> Void in
+                
+                // Stop the spinner
+                spinner.stopAnimating()
+                
+                if ((user) != nil) {
+                    let alert = UIAlertController(title: "Success", message:"Login Successful", preferredStyle: .Alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .Default) { _ in })
+                    self.presentViewController(alert, animated: true){}
+                    
+                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                        let viewController:MyTabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("TabBarController") as! MyTabBarController
+                        self.presentViewController(viewController, animated: true, completion: nil)
+                    })
+                    
+                } else {
+                    let alert = UIAlertController(title: "Oops!", message: "\(error)", preferredStyle: .Alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .Default) { _ in })
+                    self.presentViewController(alert, animated: true){}
+                }
+            })
+        }
     }
     /*
     // MARK: - Navigation

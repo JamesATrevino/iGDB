@@ -30,7 +30,6 @@ class RegistrationViewController: UIViewController {
         let username = String(self.nameTextField.text!)
         let password = String(self.passwordTextField.text!)
         let confirmPassword = String(self.confirmPwTextField.text!)
-        print(username.characters.count)
         // Validate the text fields
         if username.characters.count < 5
         {
@@ -38,7 +37,7 @@ class RegistrationViewController: UIViewController {
             alert.addAction(UIAlertAction(title: "OK", style: .Default) { _ in })
             self.presentViewController(alert, animated: true){}
         }
-        else if password.characters.count < 8
+        else if password.characters.count < 5
         {
             let alert = UIAlertController(title: "Oops!", message:"Password must be greater than 5 characters", preferredStyle: .Alert)
             alert.addAction(UIAlertAction(title: "OK", style: .Default) { _ in })
