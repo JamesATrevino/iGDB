@@ -14,21 +14,9 @@ class DatabaseTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        /*var query = PFQuery(className: "Games")
-        
-        query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
-            if error == nil {
-                for object in objects! {
-                    self.gamesList.append(object)
-                    print(object["name"])
-                }
-            } else {
-                print(error)
-            }
-        }*/
-
-        //dispatch_async(dispatch_get_main_queue(), {() -> Void in self.tableView.reloadData()})
     }
+    
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

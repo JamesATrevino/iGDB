@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class RegistrationViewController: UIViewController {
+class RegistrationViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var confirmPwTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -18,15 +18,30 @@ class RegistrationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.setNavigationBarHidden(false, animated: true)
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
-        view.addGestureRecognizer(tap)
+        self.confirmPwTextField.delegate = self
+        self.passwordTextField.delegate = self
+        self.nameTextField.delegate = self
         // Do any additional setup after loading the view.
     }
-
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?){
+        self.nameTextField.resignFirstResponder()
+        self.passwordTextField.resignFirstResponder()
+        self.confirmPwTextField.resignFirstResponder()
+        super.touchesBegan(touches, withEvent: event)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
     
     //Calls this function when the tap is recognized.
     func dismissKeyboard() {

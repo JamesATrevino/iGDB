@@ -10,22 +10,28 @@ import UIKit
 import Parse
 import Bolts
 
-class LogInRegistrationViewController: UIViewController {
+class LogInRegistrationViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var accountTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
-        view.addGestureRecognizer(tap)
+        self.accountTextField.delegate = self
+        self.passwordTextField.delegate = self
+        
         // Do any additional setup after loading the view.
     }
     
-    //Calls this function when the tap is recognized.
-    func dismissKeyboard() {
-        //Causes the view (or one of its embedded text fields) to resign the first responder status.
-        view.endEditing(true)
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?){
+        self.accountTextField.resignFirstResponder()
+        self.passwordTextField.resignFirstResponder()
+        super.touchesBegan(touches, withEvent: event)
     }
     
     override func didReceiveMemoryWarning() {
