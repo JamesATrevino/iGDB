@@ -27,7 +27,7 @@ class DatabaseTableViewController: UITableViewController {
             }
         }*/
 
-        dispatch_async(dispatch_get_main_queue(), {() -> Void in self.tableView.reloadData()})
+        //dispatch_async(dispatch_get_main_queue(), {() -> Void in self.tableView.reloadData()})
     }
 
     override func didReceiveMemoryWarning() {
