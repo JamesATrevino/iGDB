@@ -9,11 +9,28 @@
 import UIKit
 import Parse
 
+var gamesList:[PFObject] = [PFObject]()
+
 class MyTabBarController: UITabBarController {
 
+    //var gamesList:[PFObject] = [PFObject]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        var query = PFQuery(className: "Games")
+        
+        query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
+            if error == nil {
+                for object in objects! {
+                    gamesList.append(object)
+                    print(object["name"])
+                }
+            } else {
+                print(error)
+            }
+        }
+        
         // Do any additional setup after loading the view.
     }
 

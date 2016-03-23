@@ -10,30 +10,24 @@ import Parse
 import UIKit
 
 class DatabaseTableViewController: UITableViewController {
-
-    var gamesList:[PFObject] = [PFObject]()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var query = PFQuery(className: "Games")
+        /*var query = PFQuery(className: "Games")
         
         query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
             if error == nil {
                 for object in objects! {
                     self.gamesList.append(object)
+                    print(object["name"])
                 }
             } else {
                 print(error)
             }
-        }
+        }*/
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        dispatch_async(dispatch_get_main_queue(), {() -> Void in self.tableView.reloadData()})
     }
 
     override func didReceiveMemoryWarning() {
@@ -55,12 +49,11 @@ class DatabaseTableViewController: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("dbID", forIndexPath: indexPath)
 
         var game = gamesList[indexPath.row]
         var name = game["name"]
 
-        print("hey")
         cell.textLabel?.text = name as! String
         
         return cell
