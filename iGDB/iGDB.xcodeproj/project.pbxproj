@@ -28,6 +28,7 @@
 		7F6FA9491CA212FB00F37D52 /* MyTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6FA9481CA212FB00F37D52 /* MyTabBarController.swift */; };
 		7F6FA94B1CA2152600F37D52 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6FA94A1CA2152600F37D52 /* RegistrationViewController.swift */; };
 		7F6FA94D1CA2244100F37D52 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6FA94C1CA2244000F37D52 /* SettingsTableViewController.swift */; };
+		7F6FA94F1CA301D700F37D52 /* GameDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6FA94E1CA301D700F37D52 /* GameDetailViewController.swift */; };
 		FCBD8BE91CA22939000215A5 /* DatabaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBD8BE81CA22939000215A5 /* DatabaseTableViewController.swift */; };
 		FCBD8BED1CA23BDA000215A5 /* GamesTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBD8BEC1CA23BDA000215A5 /* GamesTabViewController.swift */; };
 /* End PBXBuildFile section */
@@ -56,6 +57,7 @@
 		7F6FA9481CA212FB00F37D52 /* MyTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTabBarController.swift; sourceTree = "<group>"; };
 		7F6FA94A1CA2152600F37D52 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		7F6FA94C1CA2244000F37D52 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		7F6FA94E1CA301D700F37D52 /* GameDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameDetailViewController.swift; sourceTree = "<group>"; };
 		FCBD8BE81CA22939000215A5 /* DatabaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseTableViewController.swift; sourceTree = "<group>"; };
 		FCBD8BEC1CA23BDA000215A5 /* GamesTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesTabViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -119,6 +121,7 @@
 				7F6FA9481CA212FB00F37D52 /* MyTabBarController.swift */,
 				FCBD8BEC1CA23BDA000215A5 /* GamesTabViewController.swift */,
 				7F6FA94C1CA2244000F37D52 /* SettingsTableViewController.swift */,
+				7F6FA94E1CA301D700F37D52 /* GameDetailViewController.swift */,
 				7F568C5F1CA04B4B001E837D /* ViewController.swift */,
 				7F568C611CA04B4B001E837D /* Main.storyboard */,
 				7DF48F801CA0CB7C002F8FD4 /* Parse.framework */,
@@ -201,6 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCBD8BE91CA22939000215A5 /* DatabaseTableViewController.swift in Sources */,
+				7F6FA94F1CA301D700F37D52 /* GameDetailViewController.swift in Sources */,
 				7F6FA94B1CA2152600F37D52 /* RegistrationViewController.swift in Sources */,
 				7F568C601CA04B4B001E837D /* ViewController.swift in Sources */,
 				7F568C5E1CA04B4B001E837D /* AppDelegate.swift in Sources */,

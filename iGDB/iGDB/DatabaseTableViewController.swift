@@ -51,12 +51,23 @@ class DatabaseTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("dbID", forIndexPath: indexPath)
 
-        var game = gamesList[indexPath.row]
-        var name = game["name"]
+        let game = gamesList[indexPath.row]
+        let name = game["name"]
 
-        cell.textLabel?.text = name as! String
+        cell.textLabel?.text = (name as! String)
         
         return cell
+    }
+    
+    // MARK: - Navigation
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        let gameDetailVC:GameDetailViewController = (segue.destinationViewController as? GameDetailViewController)!
+        let indexPath = self.tableView.indexPathForCell(sender as! UITableViewCell)
+        gameDetailVC.game = gamesList[(indexPath?.row)!]
     }
 
     /*
@@ -91,16 +102,6 @@ class DatabaseTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         // Return false if you do not want the item to be re-orderable.
         return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
     }
     */
 

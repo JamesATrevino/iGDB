@@ -18,13 +18,12 @@ class MyTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var query = PFQuery(className: "Games")
+        let query = PFQuery(className: "Games")
         
         query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
             if error == nil {
                 for object in objects! {
                     gamesList.append(object)
-                    print(object["name"])
                 }
             } else {
                 print(error)
