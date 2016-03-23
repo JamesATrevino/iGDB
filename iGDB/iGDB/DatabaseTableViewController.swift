@@ -13,6 +13,7 @@ class DatabaseTableViewController: UITableViewController {
 
     var gamesList:[PFObject] = [PFObject]()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -59,7 +60,9 @@ class DatabaseTableViewController: UITableViewController {
         var game = gamesList[indexPath.row]
         var name = game["name"]
 
+        print("hey")
         cell.textLabel?.text = name as! String
+        
         return cell
     }
 
