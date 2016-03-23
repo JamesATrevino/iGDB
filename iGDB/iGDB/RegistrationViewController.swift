@@ -11,6 +11,8 @@ import Parse
 
 class RegistrationViewController: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var registerbutton: UIButton!
+    @IBOutlet weak var donebutton: UIButton!
     @IBOutlet weak var confirmPwTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
@@ -21,6 +23,8 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
         self.confirmPwTextField.delegate = self
         self.passwordTextField.delegate = self
         self.nameTextField.delegate = self
+        donebutton.layer.cornerRadius = 8;
+        registerbutton.layer.cornerRadius = 8;
         // Do any additional setup after loading the view.
     }
     

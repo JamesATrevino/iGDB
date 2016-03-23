@@ -14,12 +14,15 @@ class LogInRegistrationViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var accountTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var registerButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.accountTextField.delegate = self
         self.passwordTextField.delegate = self
-        
+        registerButton.layer.cornerRadius = 0.8
+        loginButton.layer.cornerRadius = 0.8
         // Do any additional setup after loading the view.
     }
     

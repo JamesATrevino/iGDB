@@ -6,7 +6,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iGDB/AppDelegate.swift"
@@ -17,49 +17,34 @@
             endingLineNumber = "13">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "iGDB.AppDelegate.__deallocating_deinit"
-                  moduleName = "iGDB"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Mark1/Documents/mygithubpage/iGDB/iGDB/iGDB/AppDelegate.swift"
-                  timestampString = "480465101.673894"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "16">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "iGDB.AppDelegate.init (iGDB.AppDelegate.Type)() -&gt; iGDB.AppDelegate"
                   moduleName = "iGDB"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Mark1/Documents/mygithubpage/iGDB/iGDB/iGDB/AppDelegate.swift"
-                  timestampString = "480465101.674386"
+                  timestampString = "480468802.646944"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
                   endingLineNumber = "0"
-                  offsetFromSymbolStart = "60">
+                  offsetFromSymbolStart = "12">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "main"
                   moduleName = "iGDB"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Mark1/Documents/mygithubpage/iGDB/iGDB/iGDB/AppDelegate.swift"
-                  timestampString = "480465101.674701"
+                  timestampString = "480468802.647189"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "15"
                   endingLineNumber = "15"
-                  offsetFromSymbolStart = "28">
+                  offsetFromSymbolStart = "22">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -71,11 +56,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iGDB/RegistrationViewController.swift"
-            timestampString = "480468034.946395"
+            timestampString = "480469143.956852"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
             landmarkName = "RegistrationViewController"
             landmarkType = "3">
          </BreakpointContent>
