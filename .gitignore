@@ -5,3 +5,5 @@
 *.xcscmblueprint
 
 *.plist
+
+.DS_Store
