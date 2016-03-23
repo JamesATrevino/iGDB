@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D7D45151CA34E52000F8F6A /* AccountDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7D45141CA34E52000F8F6A /* AccountDetailsViewController.swift */; };
 		7DF48F7F1CA0CB73002F8FD4 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DF48F7E1CA0CB73002F8FD4 /* Bolts.framework */; };
 		7DF48F811CA0CB7C002F8FD4 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DF48F801CA0CB7C002F8FD4 /* Parse.framework */; };
 		7DF48F831CA0CBA9002F8FD4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DF48F821CA0CBA9002F8FD4 /* AudioToolbox.framework */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7D7D45141CA34E52000F8F6A /* AccountDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountDetailsViewController.swift; sourceTree = "<group>"; };
 		7DF48F7E1CA0CB73002F8FD4 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		7DF48F801CA0CB7C002F8FD4 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		7DF48F821CA0CBA9002F8FD4 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -117,6 +119,7 @@
 				7F568C5D1CA04B4B001E837D /* AppDelegate.swift */,
 				7F6FA9441CA1B01100F37D52 /* LogInRegistrationViewController.swift */,
 				7F6FA94A1CA2152600F37D52 /* RegistrationViewController.swift */,
+				7D7D45141CA34E52000F8F6A /* AccountDetailsViewController.swift */,
 				FCBD8BE81CA22939000215A5 /* DatabaseTableViewController.swift */,
 				7F6FA9481CA212FB00F37D52 /* MyTabBarController.swift */,
 				FCBD8BEC1CA23BDA000215A5 /* GamesTabViewController.swift */,
@@ -210,6 +213,7 @@
 				7F568C5E1CA04B4B001E837D /* AppDelegate.swift in Sources */,
 				7F568C661CA04B4B001E837D /* iGDB.xcdatamodeld in Sources */,
 				FCBD8BED1CA23BDA000215A5 /* GamesTabViewController.swift in Sources */,
+				7D7D45151CA34E52000F8F6A /* AccountDetailsViewController.swift in Sources */,
 				7F6FA9451CA1B01100F37D52 /* LogInRegistrationViewController.swift in Sources */,
 				7F6FA9491CA212FB00F37D52 /* MyTabBarController.swift in Sources */,
 				7F6FA94D1CA2244100F37D52 /* SettingsTableViewController.swift in Sources */,
