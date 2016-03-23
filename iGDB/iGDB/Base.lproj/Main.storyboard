@@ -226,6 +226,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
+                        <outlet property="imageView" destination="AfR-qz-oPS" id="LVE-dl-Pxj"/>
                         <outlet property="metacriticLabel" destination="GFb-Np-GPS" id="fIv-dF-7rg"/>
                         <outlet property="platformsLabel" destination="hed-fh-xbr" id="Ci7-wP-R0N"/>
                         <outlet property="studioLabel" destination="Lrx-pZ-nqW" id="kgD-xg-z7Z"/>
