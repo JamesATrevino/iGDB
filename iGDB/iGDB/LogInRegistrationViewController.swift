@@ -70,10 +70,6 @@ class LogInRegistrationViewController: UIViewController, UITextFieldDelegate {
                 spinner.stopAnimating()
                 
                 if ((user) != nil) {
-                    let alert = UIAlertController(title: "Success", message:"Login Successful", preferredStyle: .Alert)
-                    alert.addAction(UIAlertAction(title: "OK", style: .Default) { _ in })
-                    self.presentViewController(alert, animated: true){}
-                    
                     dispatch_async(dispatch_get_main_queue(), { () -> Void in
                         let viewController:MyTabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("TabBarController") as! MyTabBarController
                         self.presentViewController(viewController, animated: true, completion: nil)
