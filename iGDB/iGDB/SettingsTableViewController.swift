@@ -13,6 +13,8 @@ class SettingsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -44,21 +46,21 @@ class SettingsTableViewController: UITableViewController {
             // Send a request to log out a user
             PFUser.logOut()
             
-            let alert = UIAlertController(title: "Logging Out...", message:"This will log you out of your account.", preferredStyle: .Alert)
+            
+            /*let alert = UIAlertController(title: "Logging Out...", message:"This will log you out of your account.", preferredStyle: .Alert)
+            
             alert.addAction(UIAlertAction(title: "OK",
-                                        style: .Default)
-                { _ in dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            style: .Default) { _ in dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Login")
+            self.presentViewController(viewController, animated: true, completion: nil)
+            })})
+            */
+            
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
                     let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Login")
                     self.presentViewController(viewController, animated: true, completion: nil)
-                })})
+                })
             
-            alert.addAction(UIAlertAction(title: "Cancel", style: .Default) { _ in self.presentViewController(alert, animated: true){}})
-            //self.presentViewController(alert, animated: true){}
-            
-            /*dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Login")
-                self.presentViewController(viewController, animated: true, completion: nil)
-            })*/
         }
     }
 

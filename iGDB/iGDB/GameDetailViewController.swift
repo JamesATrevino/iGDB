@@ -21,6 +21,8 @@ class GameDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+        
         // Do any additional setup after loading the view.
         let name = game!["name"]
         self.title = name as? String

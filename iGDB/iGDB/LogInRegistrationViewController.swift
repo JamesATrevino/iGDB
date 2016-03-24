@@ -21,8 +21,8 @@ class LogInRegistrationViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         self.accountTextField.delegate = self
         self.passwordTextField.delegate = self
-        registerButton.layer.cornerRadius = 0.8
-        loginButton.layer.cornerRadius = 0.8
+        registerButton.layer.cornerRadius = 8
+        loginButton.layer.cornerRadius = 8
         // Do any additional setup after loading the view.
     }
     
