@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6Lo-br-8JX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A278b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6Lo-br-8JX">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -41,7 +41,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UTM-24-9dJ">
                                 <rect key="frame" x="94" y="375" width="227" height="30"/>
-                                <color key="backgroundColor" red="0.21132454918474308" green="0.61429963728697057" blue="0.64313725490196083" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -71,7 +71,7 @@
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" secureTextEntry="YES"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.89803921568627454" green="0.98431372549019602" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="YJ2-YW-aU1"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
@@ -115,7 +115,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="GAQ-33-o9e">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.8980392157" green="0.98431372549999996" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="dbID" id="YYj-eM-v6y">
                                 <rect key="frame" x="0.0" y="92" width="414" height="44"/>
@@ -219,13 +219,13 @@
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Trk-uA-tsS">
                                 <rect key="frame" x="14" y="449" width="363" height="212"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.8980392157" green="0.98431372549999996" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.8980392157" green="0.98431372549999996" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
@@ -282,7 +282,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.8980392157" green="0.98431372549999996" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Discuss" image="DiscussIcon" id="QxZ-hK-eBL"/>
                     <navigationItem key="navigationItem" id="cfd-ba-qFt"/>
@@ -296,10 +296,10 @@
         <scene sceneID="RMo-QB-0Ks">
             <objects>
                 <tableViewController storyboardIdentifier="Settings" title="Settings" id="xAn-dw-b4B" customClass="SettingsTableViewController" customModule="iGDB" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="8k9-hy-70G">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="8k9-hy-70G">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.8980392157" green="0.98431372549999996" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
                             <tableViewSection id="hKF-jv-Mye">
                                 <cells>
@@ -420,7 +420,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.8980392157" green="0.98431372549999996" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
@@ -450,7 +450,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.8980392157" green="0.98431372549999996" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>
@@ -472,7 +472,7 @@
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="If you have any questions or concerns, please contact us the email address below." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="XU7-Ha-lD5">
                                 <rect key="frame" x="0.0" y="83" width="414" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.8980392157" green="0.98431372549999996" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -483,7 +483,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.8980392157" green="0.98431372549999996" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>
@@ -519,16 +519,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BVC-UQ-rUV">
-                                <rect key="frame" x="99" y="377" width="216" height="30"/>
-                                <color key="backgroundColor" red="0.2042927957422388" green="0.6863956151832461" blue="0.14635017667161621" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Register">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="registerBtnPressed:" destination="iMy-PQ-HF7" eventType="touchUpInside" id="Qfp-wy-ABA"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w8X-k3-dD0">
                                 <rect key="frame" x="99" y="217" width="216" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -544,8 +534,18 @@
                                     <segue destination="ti2-sC-wCV" kind="show" id="tLa-kQ-T8c"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BVC-UQ-rUV">
+                                <rect key="frame" x="99" y="377" width="216" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Register">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="registerBtnPressed:" destination="iMy-PQ-HF7" eventType="touchUpInside" id="Qfp-wy-ABA"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.91923854011844708" green="0.98921551049016676" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
@@ -601,7 +601,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.8980392157" green="0.98431372549999996" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="NewsFeed" image="NewsIcon" id="CMl-TY-khx"/>
                     <navigationItem key="navigationItem" id="sQb-HZ-7S9"/>
