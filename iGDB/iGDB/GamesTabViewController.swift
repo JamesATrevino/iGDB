@@ -11,6 +11,6 @@ import UIKit
 class GamesTabViewController: UITabBarController {
 
     override func viewDidLoad() {
-       // var gamesList =
+
     }
 }

@@ -45,17 +45,6 @@ class SettingsTableViewController: UITableViewController {
         {
             // Send a request to log out a user
             PFUser.logOut()
-            
-            
-            /*let alert = UIAlertController(title: "Logging Out...", message:"This will log you out of your account.", preferredStyle: .Alert)
-            
-            alert.addAction(UIAlertAction(title: "OK",
-            style: .Default) { _ in dispatch_async(dispatch_get_main_queue(), { () -> Void in
-            let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Login")
-            self.presentViewController(viewController, animated: true, completion: nil)
-            })})
-            */
-            
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                     let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("loginNav")
                     self.presentViewController(viewController, animated: true, completion: nil)

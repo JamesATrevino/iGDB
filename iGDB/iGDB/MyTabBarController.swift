@@ -12,8 +12,6 @@ import Parse
 var gamesList:[PFObject] = [PFObject]()
 
 class MyTabBarController: UITabBarController {
-
-    //var gamesList:[PFObject] = [PFObject]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
