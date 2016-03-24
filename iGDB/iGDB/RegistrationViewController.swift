@@ -25,6 +25,7 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
         self.nameTextField.delegate = self
         donebutton.layer.cornerRadius = 8;
         registerbutton.layer.cornerRadius = 8;
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
         // Do any additional setup after loading the view.
     }
     

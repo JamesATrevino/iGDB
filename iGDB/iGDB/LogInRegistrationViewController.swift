@@ -23,6 +23,7 @@ class LogInRegistrationViewController: UIViewController, UITextFieldDelegate {
         self.passwordTextField.delegate = self
         registerButton.layer.cornerRadius = 8
         loginButton.layer.cornerRadius = 8
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
         // Do any additional setup after loading the view.
     }
     
