@@ -57,7 +57,7 @@ class SettingsTableViewController: UITableViewController {
             */
             
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                    let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Login")
+                    let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("loginNav")
                     self.presentViewController(viewController, animated: true, completion: nil)
                 })
             
