@@ -52,8 +52,8 @@ class SettingsTableViewController: UITableViewController {
                     self.presentViewController(viewController, animated: true, completion: nil)
                 })})
             
-            alert.addAction(UIAlertAction(title: "Cancel", style: .Default) { _ in })
-            self.presentViewController(alert, animated: true){}
+            alert.addAction(UIAlertAction(title: "Cancel", style: .Default) { _ in self.presentViewController(alert, animated: true){}})
+            //self.presentViewController(alert, animated: true){}
             
             /*dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Login")
