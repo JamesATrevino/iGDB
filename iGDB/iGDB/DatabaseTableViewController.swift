@@ -9,15 +9,41 @@
 import Parse
 import UIKit
 
+extension DatabaseTableViewController: UISearchResultsUpdating {
+    func updateSearchResultsForSearchController(searchController: UISearchController) {
+        filterContentForSearchText(searchController.searchBar.text!)
+    }
+}
+
 class DatabaseTableViewController: UITableViewController {
+    
+    @IBOutlet var searchBar: UISearchBar!
+    let searchController = UISearchController(searchResultsController: nil)
+    var filteredGames = [PFObject]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationController?.setNavigationBarHidden(false, animated: false)
+        
+        searchController.searchResultsUpdater = self
+        searchController.dimsBackgroundDuringPresentation = false
+        definesPresentationContext = true
+        tableView.tableHeaderView = searchController.searchBar
     }
     
-
+    func filterContentForSearchText(searchText: String, scope: String = "All") {
+        filteredGames = gamesList.filter { game in
+            return game["name"].lowercaseString.containsString(searchText.lowercaseString)
+        }
+        
+        tableView.reloadData()
+    }
+    
+    //func searchBarTextDidEndEditing(searchBar: UISearchBar) {
+    //    self.searchController.active = false
+    //}
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -33,6 +59,9 @@ class DatabaseTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
+        if searchController.active && searchController.searchBar.text != "" {
+            return filteredGames.count
+        }
         return gamesList.count
     }
 
@@ -40,7 +69,10 @@ class DatabaseTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("dbID", forIndexPath: indexPath)
 
-        let game = gamesList[indexPath.row]
+        var game = gamesList[indexPath.row]
+        if searchController.active && searchController.searchBar.text != "" {
+            game = filteredGames[indexPath.row]
+        }
         let name = game["name"]
 
         cell.textLabel?.text = (name as! String)
@@ -50,13 +82,24 @@ class DatabaseTableViewController: UITableViewController {
     
     // MARK: - Navigation
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        //self.performSegueWithIdentifier("details", sender: self)
+        self.searchController.active = false
+    }
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         let gameDetailVC:GameDetailViewController = (segue.destinationViewController as? GameDetailViewController)!
-        let indexPath = self.tableView.indexPathForCell(sender as! UITableViewCell)
-        gameDetailVC.game = gamesList[(indexPath?.row)!]
+        //let indexPath = self.tableView.indexPathForCell(sender as! UITableViewCell)
+        let indexPath = tableView.indexPathForSelectedRow
+        if searchController.active && searchController.searchBar.text != "" {
+            gameDetailVC.game = filteredGames[indexPath!.row]
+        }
+        else {
+            gameDetailVC.game = gamesList[(indexPath?.row)!]
+        }
     }
 
     /*
