@@ -73,6 +73,23 @@ class GameDetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        let reviewViewVC:ReviewViewController = (segue.destinationViewController as? ReviewViewController)!
+        reviewViewVC.game = game
+        
+        //let indexPath = self.tableView.indexPathForCell(sender as! UITableViewCell)
+        /*let indexPath = tableView.indexPathForSelectedRow
+        if searchController.active && searchController.searchBar.text != "" {
+            gameDetailVC.game = filteredGames[indexPath!.row]
+        }
+        else {
+            gameDetailVC.game = gamesList[(indexPath?.row)!]
+        }*/
+    }
+    
 
     /*
     // MARK: - Navigation

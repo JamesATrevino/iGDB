@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15A278b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6Lo-br-8JX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15A278b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6Lo-br-8JX">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -262,7 +262,7 @@
         <!--Review Game-->
         <scene sceneID="IeQ-IG-jSJ">
             <objects>
-                <viewController storyboardIdentifier="Review This Game" title="Review Game" id="zg7-2h-FZd" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Review This Game" title="Review Game" id="zg7-2h-FZd" customClass="ReviewViewController" customModule="iGDB" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mnw-Ao-WVD"/>
                         <viewControllerLayoutGuide type="bottom" id="vIP-X9-Gs5"/>
@@ -272,12 +272,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E.g. This game made me feel..." textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ds8-wd-j7E">
-                                <rect key="frame" x="20" y="479" width="334" height="30"/>
+                                <rect key="frame" x="20" y="510" width="334" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Write A Comment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Eh-3Y-M1u">
-                                <rect key="frame" x="20" y="450" width="136" height="21"/>
+                                <rect key="frame" x="20" y="481" width="136" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -287,35 +287,41 @@
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="253-YD-Tq5">
-                                <rect key="frame" x="20" y="517" width="140" height="34"/>
+                                <rect key="frame" x="20" y="548" width="140" height="34"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Submit Review">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tPa-E9-ZhO">
-                                <rect key="frame" x="20" y="366" width="46" height="41"/>
+                                <rect key="frame" x="20" y="397" width="46" height="41"/>
                                 <state key="normal" title="Button" image="UnfilledStar"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="svc-ef-K8u">
-                                <rect key="frame" x="64" y="366" width="46" height="41"/>
+                                <rect key="frame" x="64" y="397" width="46" height="41"/>
                                 <state key="normal" title="Button" image="UnfilledStar"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u66-Hl-wOG">
-                                <rect key="frame" x="108" y="366" width="46" height="41"/>
+                                <rect key="frame" x="108" y="397" width="46" height="41"/>
                                 <state key="normal" title="Button" image="UnfilledStar"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pF3-NN-WVk">
-                                <rect key="frame" x="152" y="366" width="46" height="41"/>
+                                <rect key="frame" x="152" y="397" width="46" height="41"/>
                                 <state key="normal" title="Button" image="UnfilledStar"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RJq-wh-fvV">
-                                <rect key="frame" x="198" y="366" width="46" height="41"/>
+                                <rect key="frame" x="198" y="397" width="46" height="41"/>
                                 <state key="normal" title="Button" image="UnfilledStar"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rate This Game:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RvR-2i-rc7">
-                                <rect key="frame" x="20" y="329" width="126" height="21"/>
+                                <rect key="frame" x="20" y="360" width="126" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eph-r6-mry">
+                                <rect key="frame" x="20" y="287" width="334" height="65"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -323,6 +329,12 @@
                         <color key="backgroundColor" red="0.8980392157" green="0.98431372549999996" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="commentField" destination="ds8-wd-j7E" id="neX-aY-y0U"/>
+                        <outlet property="gameLabel" destination="Eph-r6-mry" id="uEx-ic-3pb"/>
+                        <outlet property="imageView" destination="5R0-G6-qst" id="yhf-Ux-NTc"/>
+                        <outlet property="submitReview" destination="253-YD-Tq5" id="U81-2H-JfB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rs7-tq-25P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
