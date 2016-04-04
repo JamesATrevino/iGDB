@@ -30,6 +30,7 @@
 		7F6FA94B1CA2152600F37D52 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6FA94A1CA2152600F37D52 /* RegistrationViewController.swift */; };
 		7F6FA94D1CA2244100F37D52 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6FA94C1CA2244000F37D52 /* SettingsTableViewController.swift */; };
 		7F6FA94F1CA301D700F37D52 /* GameDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6FA94E1CA301D700F37D52 /* GameDetailViewController.swift */; };
+		FC91CABC1CB332870016BBF9 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC91CABB1CB332870016BBF9 /* RatingControl.swift */; };
 		FCBD8BE91CA22939000215A5 /* DatabaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBD8BE81CA22939000215A5 /* DatabaseTableViewController.swift */; };
 		FCBD8BED1CA23BDA000215A5 /* GamesTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBD8BEC1CA23BDA000215A5 /* GamesTabViewController.swift */; };
 		FCF0B5E41CB3276900DA192E /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF0B5E31CB3276900DA192E /* ReviewViewController.swift */; };
@@ -61,6 +62,7 @@
 		7F6FA94A1CA2152600F37D52 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		7F6FA94C1CA2244000F37D52 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		7F6FA94E1CA301D700F37D52 /* GameDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameDetailViewController.swift; sourceTree = "<group>"; };
+		FC91CABB1CB332870016BBF9 /* RatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 		FCBD8BE81CA22939000215A5 /* DatabaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseTableViewController.swift; sourceTree = "<group>"; };
 		FCBD8BEC1CA23BDA000215A5 /* GamesTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesTabViewController.swift; sourceTree = "<group>"; };
 		FCF0B5E31CB3276900DA192E /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				FCBD8BE81CA22939000215A5 /* DatabaseTableViewController.swift */,
 				7F6FA94E1CA301D700F37D52 /* GameDetailViewController.swift */,
 				FCF0B5E31CB3276900DA192E /* ReviewViewController.swift */,
+				FC91CABB1CB332870016BBF9 /* RatingControl.swift */,
 				7F568C5F1CA04B4B001E837D /* ViewController.swift */,
 				7F568C611CA04B4B001E837D /* Main.storyboard */,
 				7DF48F801CA0CB7C002F8FD4 /* Parse.framework */,
@@ -219,6 +222,7 @@
 				FCBD8BED1CA23BDA000215A5 /* GamesTabViewController.swift in Sources */,
 				7D7D45151CA34E52000F8F6A /* AccountDetailsViewController.swift in Sources */,
 				7F6FA9451CA1B01100F37D52 /* LogInRegistrationViewController.swift in Sources */,
+				FC91CABC1CB332870016BBF9 /* RatingControl.swift in Sources */,
 				7F6FA9491CA212FB00F37D52 /* MyTabBarController.swift in Sources */,
 				7F6FA94D1CA2244100F37D52 /* SettingsTableViewController.swift in Sources */,
 			);
