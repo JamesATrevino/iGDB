@@ -76,7 +76,63 @@ class ReviewViewController: UIViewController, UITextFieldDelegate {
         view.endEditing(true)
     }
     
+//    func sendRating() {
+//        if indexPath.row == 3
+//        {
+//            // Send a request to log out a user
+//            PFUser.logOut()
+//            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+//                let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("loginNav")
+//                self.presentViewController(viewController, animated: true, completion: nil)
+//            })
+//            
+//        }
+//    }
 
+    @IBAction func loginPressed(sender: AnyObject){
+        
+        let userID = String(PFUser.currentUser())
+        let gameID = String(game!["objectId"] as? String)
+        let userRating = 0;
+        let userComment = String(self.commentField.text!);
+        
+        // Validate the text fields
+        /*if userComment.characters.count < 5
+        {
+            let alert = UIAlertController(title: "Oops!", message:"You forgot to add a review", preferredStyle: .Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .Default) { _ in })
+            self.presentViewController(alert, animated: true){}
+        }*/
+        
+        if true {
+            //do nothing
+        }
+            
+        else
+        {
+            // Run a spinner to show a task in progress
+            let spinner: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0, 0, 150, 150)) as UIActivityIndicatorView
+            spinner.startAnimating()
+            
+            // Send the user rating to the server
+            //PFUser.logInWithUsernameInBackground(username, password: password, block: { (user, error) -> Void in
+                
+            // Stop the spinner
+            spinner.stopAnimating()
+                
+            if (true)
+            {
+                    /*dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                        let viewController:UINavigationController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("mainNav") as! UINavigationController
+                        self.presentViewController(viewController, animated: true, completion: nil)
+                    })*/
+                    
+            } else {
+                    let alert = UIAlertController(title: "Oops!", message: "Unknown Error", preferredStyle: .Alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .Default) { _ in })
+                    self.presentViewController(alert, animated: true){}}
+            }
+        }
     /*
     // MARK: - Navigation
 
