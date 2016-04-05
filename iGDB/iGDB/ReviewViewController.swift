@@ -16,14 +16,20 @@ class ReviewViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var submitReview: UIButton!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var gameLabel: UILabel!
+    @IBOutlet weak var mywidth: NSLayoutConstraint!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let name = game!["name"]
-        self.title = name as? String
+        self.scrollView.directionalLockEnabled = true
+        //self.scrollView.keyboardDismissMode
+        
+        //let name = game!["name"]
+        self.title = "Write A Review" // as? String
         gameLabel.text = game!["name"] as? String
         
         self.commentField.delegate = self
+        self.mywidth.constant = self.view.bounds.size.width
         
         let url = game!["image"] as? String
         if url != "not set"
@@ -32,7 +38,9 @@ class ReviewViewController: UIViewController, UITextFieldDelegate {
             imageView.contentMode = .ScaleAspectFit
             downloadImage(checkedUrl!)
         }
-
+        
+        //self.scrollView.setContentOffset(CGPointMake(0, self.scrollView.contentOffset.y), animated: false)
+        
         // Do any additional setup after loading the view.
     }
     
@@ -70,26 +78,29 @@ class ReviewViewController: UIViewController, UITextFieldDelegate {
         super.touchesBegan(touches, withEvent: event)
     }
     
-    //Calls this function when the tap is recognized.
     func dismissKeyboard() {
-        //Causes the view (or one of its embedded text fields) to resign the first responder status.
         view.endEditing(true)
     }
     
-//    func sendRating() {
-//        if indexPath.row == 3
-//        {
-//            // Send a request to log out a user
-//            PFUser.logOut()
-//            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-//                let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("loginNav")
-//                self.presentViewController(viewController, animated: true, completion: nil)
-//            })
-//            
-//        }
-//    }
+    func textFieldDidBeginEditing(textField: UITextField) {
+        animateViewMoving(true, moveValue: 200)
+    }
+    
+    func textFieldDidEndEditing(textField: UITextField) {
+        animateViewMoving(false, moveValue: 200)
+    }
+    
+    func animateViewMoving (up:Bool, moveValue :CGFloat){
+        let movementDuration:NSTimeInterval = 0.3
+        let movement:CGFloat = ( up ? -moveValue : moveValue)
+        UIView.beginAnimations( "animateView", context: nil)
+        UIView.setAnimationBeginsFromCurrentState(true)
+        UIView.setAnimationDuration(movementDuration )
+        self.view.frame = CGRectOffset(self.view.frame, 0,  movement)
+        UIView.commitAnimations()
+    }
 
-    @IBAction func loginPressed(sender: AnyObject){
+    /*@IBAction func loginPressed(sender: AnyObject){
         
         let userID = String(PFUser.currentUser())
         let gameID = String(game!["objectId"] as? String)
@@ -104,7 +115,7 @@ class ReviewViewController: UIViewController, UITextFieldDelegate {
             self.presentViewController(alert, animated: true){}
         }*/
         
-        if true {
+        if false {
             //do nothing
         }
             
@@ -116,11 +127,19 @@ class ReviewViewController: UIViewController, UITextFieldDelegate {
             
             // Send the user rating to the server
             //PFUser.logInWithUsernameInBackground(username, password: password, block: { (user, error) -> Void in
-                
+            //            // Send a request to log out a user
+            //            PFUser.logOut()
+            //            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            //                let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("loginNav")
+            //                self.presentViewController(viewController, animated: true, completion: nil)
+            //            })
+            //            
+
+            
             // Stop the spinner
             spinner.stopAnimating()
                 
-            if (true)
+            if (false)
             {
                     /*dispatch_async(dispatch_get_main_queue(), { () -> Void in
                         let viewController:UINavigationController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("mainNav") as! UINavigationController
@@ -132,15 +151,6 @@ class ReviewViewController: UIViewController, UITextFieldDelegate {
                     alert.addAction(UIAlertAction(title: "OK", style: .Default) { _ in })
                     self.presentViewController(alert, animated: true){}}
             }
-        }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+        }*/
 
 }
