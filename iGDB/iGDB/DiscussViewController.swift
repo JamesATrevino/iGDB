@@ -61,7 +61,6 @@ class DiscussViewController: UIViewController, UITableViewDelegate, UITableViewD
         // Pass the selected object to the new view controller.
         let commentsDetailVC:CommentsDetailViewController = (segue.destinationViewController as? CommentsDetailViewController)!
         //let indexPath = self.tableView.indexPathForCell(sender as! UITableViewCell)
-        print("prepping for segue")
         let indexPath = tableView.indexPathForSelectedRow
         //if searchController.active && searchController.searchBar.text != "" {
         //    gameDetailVC.game = filteredGames[indexPath!.row]
