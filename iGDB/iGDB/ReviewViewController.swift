@@ -110,7 +110,7 @@ class ReviewViewController: UIViewController, UITextFieldDelegate {
         gameScore["gameID"] = game?.objectId
         gameScore["userID"] = (PFUser.currentUser())!.objectId
         gameScore["gamename"] = game!["name"]
-        gameScore["username"] = "username" //PFUser.currentUser()!["name"]
+        gameScore["username"] = PFUser.currentUser()!.username
         
         gameScore.saveInBackgroundWithBlock {
             (success: Bool, error: NSError?) -> Void in
