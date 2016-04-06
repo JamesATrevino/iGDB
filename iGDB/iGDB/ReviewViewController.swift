@@ -18,6 +18,8 @@ class ReviewViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var gameLabel: UILabel!
     @IBOutlet weak var mywidth: NSLayoutConstraint!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var userScore: UILabel!
+    @IBOutlet weak var stepper: UIStepper!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,67 +94,35 @@ class ReviewViewController: UIViewController, UITextFieldDelegate {
         self.view.frame = CGRectOffset(self.view.frame, 0,  movement)
         UIView.commitAnimations()
     }
+    
+    
+    @IBAction func stepperAction(sender: AnyObject) {
+        userScore.text = "\(Int(stepper.value))"
+    }
 
     @IBAction func submitPressed(sender: AnyObject){
         
-        let userID = String(PFUser.currentUser())
-        print(userID)
+        let myInt:Int? = Int(userScore.text!)
         
         var gameScore = PFObject(className:"UserRatings")
-        gameScore["userRating"] = 3
+        gameScore["userRating"] = myInt //TODO: Remove hardcoded rating and pull from view
         gameScore["userComment"] = String(self.commentField.text!)
-        gameScore["gameID"] = String(game!["objectId"] as? String)
-        gameScore["userID"] = "6R6CUWgRHg"
+        gameScore["gameID"] = game?.objectId
+        gameScore["userID"] = (PFUser.currentUser())!.objectId
+        
         gameScore.saveInBackgroundWithBlock {
             (success: Bool, error: NSError?) -> Void in
             if (success) {
-                // The object has been saved.
+                let alert = UIAlertController(title: "Success!", message:
+                    "Your review has been submitted. To return to the game entry, use the navigation bar.", preferredStyle: .Alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .Default) { _ in })
+                self.presentViewController(alert, animated: true){}
             } else {
-                // There was a problem, check error.description
+                let alert = UIAlertController(title: "Oops!", message: "There was an error sending your review. Please try again.", preferredStyle: .Alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .Default) { _ in })
+                self.presentViewController(alert, animated: true){}
             }
         }
         
     }
-    
-    
-    /*
-     
-        if false {
-            //do nothing
-        }
-            
-        else
-        {
-            // Run a spinner to show a task in progress
-            let spinner: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0, 0, 150, 150)) as UIActivityIndicatorView
-            spinner.startAnimating()
-            
-            // Send the user rating to the server
-            //PFUser.logInWithUsernameInBackground(username, password: password, block: { (user, error) -> Void in
-            //            // Send a request to log out a user
-            //            PFUser.logOut()
-            //            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-            //                let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("loginNav")
-            //                self.presentViewController(viewController, animated: true, completion: nil)
-            //            })
-            //            
-
-            
-            // Stop the spinner
-            spinner.stopAnimating()
-                
-            if (false)
-            {
-                    /*dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                        let viewController:UINavigationController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("mainNav") as! UINavigationController
-                        self.presentViewController(viewController, animated: true, completion: nil)
-                    })*/
-                    
-            } else {
-                    let alert = UIAlertController(title: "Oops!", message: "Unknown Error", preferredStyle: .Alert)
-                    alert.addAction(UIAlertAction(title: "OK", style: .Default) { _ in })
-                    self.presentViewController(alert, animated: true){}}
-            }
-        }*/
-
 }
