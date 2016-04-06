@@ -30,6 +30,18 @@ class MyTabBarController: UITabBarController {
             }
         }
         
+        let r_query = PFQuery(className: "UserRatings")
+        
+        r_query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
+            if error == nil {
+                for object in objects! {
+                    reviewsList.append(object)
+                }
+            } else {
+                print(error)
+            }
+        }
+        
         // Do any additional setup after loading the view.
     }
 
