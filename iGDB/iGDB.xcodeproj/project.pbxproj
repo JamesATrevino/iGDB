@@ -21,7 +21,6 @@
 		7DF48F931CA0CBFA002F8FD4 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DF48F921CA0CBFA002F8FD4 /* libz.tbd */; };
 		7DF48F951CA0CC05002F8FD4 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DF48F941CA0CC05002F8FD4 /* libsqlite3.tbd */; };
 		7F568C5E1CA04B4B001E837D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F568C5D1CA04B4B001E837D /* AppDelegate.swift */; };
-		7F568C601CA04B4B001E837D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F568C5F1CA04B4B001E837D /* ViewController.swift */; };
 		7F568C631CA04B4B001E837D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F568C611CA04B4B001E837D /* Main.storyboard */; };
 		7F568C661CA04B4B001E837D /* iGDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7F568C641CA04B4B001E837D /* iGDB.xcdatamodeld */; };
 		7F568C681CA04B4B001E837D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F568C671CA04B4B001E837D /* Assets.xcassets */; };
@@ -34,7 +33,6 @@
 		7FDCC67A1CB557B100A9806E /* CommentsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDCC6791CB557B100A9806E /* CommentsDetailViewController.swift */; };
 		FC91CABC1CB332870016BBF9 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC91CABB1CB332870016BBF9 /* RatingControl.swift */; };
 		FCBD8BE91CA22939000215A5 /* DatabaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBD8BE81CA22939000215A5 /* DatabaseTableViewController.swift */; };
-		FCBD8BED1CA23BDA000215A5 /* GamesTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBD8BEC1CA23BDA000215A5 /* GamesTabViewController.swift */; };
 		FCD5131B1CB5943100A13A10 /* ReviewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD5131A1CB5943100A13A10 /* ReviewTableViewController.swift */; };
 		FCF0B5E41CB3276900DA192E /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF0B5E31CB3276900DA192E /* ReviewViewController.swift */; };
 /* End PBXBuildFile section */
@@ -55,7 +53,6 @@
 		7DF48F941CA0CC05002F8FD4 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		7F568C5A1CA04B4B001E837D /* iGDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iGDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F568C5D1CA04B4B001E837D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7F568C5F1CA04B4B001E837D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7F568C621CA04B4B001E837D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7F568C651CA04B4B001E837D /* iGDB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iGDB.xcdatamodel; sourceTree = "<group>"; };
 		7F568C671CA04B4B001E837D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -69,7 +66,6 @@
 		7FDCC6791CB557B100A9806E /* CommentsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsDetailViewController.swift; sourceTree = "<group>"; };
 		FC91CABB1CB332870016BBF9 /* RatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 		FCBD8BE81CA22939000215A5 /* DatabaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseTableViewController.swift; sourceTree = "<group>"; };
-		FCBD8BEC1CA23BDA000215A5 /* GamesTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesTabViewController.swift; sourceTree = "<group>"; };
 		FCD5131A1CB5943100A13A10 /* ReviewTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewTableViewController.swift; sourceTree = "<group>"; };
 		FCF0B5E31CB3276900DA192E /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,20 +127,18 @@
 				7F6FA94A1CA2152600F37D52 /* RegistrationViewController.swift */,
 				7D7D45141CA34E52000F8F6A /* AccountDetailsViewController.swift */,
 				7F6FA9481CA212FB00F37D52 /* MyTabBarController.swift */,
-				FCBD8BEC1CA23BDA000215A5 /* GamesTabViewController.swift */,
 				7F6FA94C1CA2244000F37D52 /* SettingsTableViewController.swift */,
 				7F6FA94E1CA301D700F37D52 /* GameDetailViewController.swift */,
 				FCF0B5E31CB3276900DA192E /* ReviewViewController.swift */,
 				FC91CABB1CB332870016BBF9 /* RatingControl.swift */,
-				7F568C5F1CA04B4B001E837D /* ViewController.swift */,
+				FCD5131A1CB5943100A13A10 /* ReviewTableViewController.swift */,
+				FCBD8BE81CA22939000215A5 /* DatabaseTableViewController.swift */,
 				7F568C611CA04B4B001E837D /* Main.storyboard */,
 				7DF48F801CA0CB7C002F8FD4 /* Parse.framework */,
 				7DF48F7E1CA0CB73002F8FD4 /* Bolts.framework */,
 				7F568C671CA04B4B001E837D /* Assets.xcassets */,
 				7F568C6C1CA04B4B001E837D /* Info.plist */,
 				7F568C641CA04B4B001E837D /* iGDB.xcdatamodeld */,
-				FCBD8BE81CA22939000215A5 /* DatabaseTableViewController.swift */,
-				FCD5131A1CB5943100A13A10 /* ReviewTableViewController.swift */,
 				7FDCC6771CB4C70300A9806E /* DiscussViewController.swift */,
 				7FDCC6791CB557B100A9806E /* CommentsDetailViewController.swift */,
 			);
@@ -226,11 +220,9 @@
 				FCF0B5E41CB3276900DA192E /* ReviewViewController.swift in Sources */,
 				FCD5131B1CB5943100A13A10 /* ReviewTableViewController.swift in Sources */,
 				7F6FA94B1CA2152600F37D52 /* RegistrationViewController.swift in Sources */,
-				7F568C601CA04B4B001E837D /* ViewController.swift in Sources */,
 				7FDCC6781CB4C70300A9806E /* DiscussViewController.swift in Sources */,
 				7F568C5E1CA04B4B001E837D /* AppDelegate.swift in Sources */,
 				7F568C661CA04B4B001E837D /* iGDB.xcdatamodeld in Sources */,
-				FCBD8BED1CA23BDA000215A5 /* GamesTabViewController.swift in Sources */,
 				7FDCC67A1CB557B100A9806E /* CommentsDetailViewController.swift in Sources */,
 				7D7D45151CA34E52000F8F6A /* AccountDetailsViewController.swift in Sources */,
 				7F6FA9451CA1B01100F37D52 /* LogInRegistrationViewController.swift in Sources */,

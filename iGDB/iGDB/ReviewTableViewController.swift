@@ -34,7 +34,7 @@ class ReviewTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("rdbID", forIndexPath: indexPath)
         
-        var review = reviewsList[indexPath.row]
+        let review = reviewsList[indexPath.row]
         
         /*if searchController.active && searchController.searchBar.text != "" {
             game = filteredGames[indexPath.row]

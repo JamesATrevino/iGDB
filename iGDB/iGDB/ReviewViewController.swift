@@ -104,7 +104,7 @@ class ReviewViewController: UIViewController, UITextFieldDelegate {
         
         let myInt:Int? = Int(userScore.text!)
         
-        var gameScore = PFObject(className:"UserRatings")
+        let gameScore = PFObject(className:"UserRatings")
         gameScore["userRating"] = myInt //TODO: Remove hardcoded rating and pull from view
         gameScore["userComment"] = String(self.commentField.text!)
         gameScore["gameID"] = game?.objectId

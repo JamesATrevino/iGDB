@@ -10,16 +10,34 @@ import UIKit
 import Parse
 
 class CommentsDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
-    var game:PFObject?
-
+    
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    
+    var game:PFObject?
+    var commentsList:[PFObject] = [PFObject]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         let name = game!["name"]
         self.headerLabel.text = String(name) + " comments"
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "commentCell")
         // Do any additional setup after loading the view.
+        let query = PFQuery(className: "gameComments")
+        query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
+            if error == nil {
+                for object in objects! {
+                    if(String(object["gameId"]) == String(self.game!["objectId"]))
+                    {
+                        self.commentsList.append(object)
+                    }
+
+                }
+            } else {
+                print(error)
+            }
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,11 +53,6 @@ class CommentsDetailViewController: UIViewController, UITableViewDelegate, UITab
         
         let cell = tableView.dequeueReusableCellWithIdentifier("commentCell", forIndexPath: indexPath)
         
-        //let game = gamesList[indexPath.row]
-        //if searchController.active && searchController.searchBar.text != "" {
-        //    game = filteredGames[indexPath.row]
-        //}
-        //let name = game["name"]
         
        // cell.textLabel?.text = (name as! String)
         
@@ -47,9 +60,11 @@ class CommentsDetailViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        print("you selected a cell")
+
     }
     
+    @IBAction func addComment(sender: AnyObject) {
+    }
     /*
     // MARK: - Navigation
 

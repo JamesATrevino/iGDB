@@ -17,7 +17,7 @@ class AccountDetailsViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        var currentUser = PFUser.currentUser()!.username
+        let currentUser = PFUser.currentUser()!.username
         username.text = currentUser
     }
 

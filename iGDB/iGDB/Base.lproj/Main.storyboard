@@ -582,6 +582,9 @@
                                 <rect key="frame" x="123" y="634" width="168" height="30"/>
                                 <color key="backgroundColor" red="0.97237222256096079" green="0.99607843139999996" blue="0.64222555449097207" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Add a comment"/>
+                                <connections>
+                                    <action selector="addComment:" destination="HdB-jr-z9d" eventType="touchUpInside" id="voK-uC-mgt"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.8980392157" green="0.98431372549999996" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
