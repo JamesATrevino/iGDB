@@ -22,9 +22,7 @@ class ReviewViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.scrollView.directionalLockEnabled = true
-        //self.scrollView.keyboardDismissMode
         
-        //let name = game!["name"]
         self.title = "Write A Review" // as? String
         gameLabel.text = game!["name"] as? String
         
@@ -38,10 +36,6 @@ class ReviewViewController: UIViewController, UITextFieldDelegate {
             imageView.contentMode = .ScaleAspectFit
             downloadImage(checkedUrl!)
         }
-        
-        //self.scrollView.setContentOffset(CGPointMake(0, self.scrollView.contentOffset.y), animated: false)
-        
-        // Do any additional setup after loading the view.
     }
     
     func getDataFromUrl(url:NSURL, completion: ((data: NSData?, response: NSURLResponse?, error: NSError? ) -> Void)) {
@@ -70,7 +64,6 @@ class ReviewViewController: UIViewController, UITextFieldDelegate {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?){
@@ -100,21 +93,30 @@ class ReviewViewController: UIViewController, UITextFieldDelegate {
         UIView.commitAnimations()
     }
 
-    /*@IBAction func loginPressed(sender: AnyObject){
+    @IBAction func submitPressed(sender: AnyObject){
         
         let userID = String(PFUser.currentUser())
-        let gameID = String(game!["objectId"] as? String)
-        let userRating = 0;
-        let userComment = String(self.commentField.text!);
+        print(userID)
         
-        // Validate the text fields
-        /*if userComment.characters.count < 5
-        {
-            let alert = UIAlertController(title: "Oops!", message:"You forgot to add a review", preferredStyle: .Alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .Default) { _ in })
-            self.presentViewController(alert, animated: true){}
-        }*/
+        var gameScore = PFObject(className:"UserRatings")
+        gameScore["userRating"] = 3
+        gameScore["userComment"] = String(self.commentField.text!)
+        gameScore["gameID"] = String(game!["objectId"] as? String)
+        gameScore["userID"] = "6R6CUWgRHg"
+        gameScore.saveInBackgroundWithBlock {
+            (success: Bool, error: NSError?) -> Void in
+            if (success) {
+                // The object has been saved.
+            } else {
+                // There was a problem, check error.description
+            }
+        }
         
+    }
+    
+    
+    /*
+     
         if false {
             //do nothing
         }
