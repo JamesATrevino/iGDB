@@ -47,6 +47,18 @@ class GameDetailViewController: UIViewController {
             imageView.contentMode = .ScaleAspectFit
             downloadImage(checkedUrl!)
         }
+        
+        let r_query = PFQuery(className: "UserRatings")
+        
+        r_query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
+            if error == nil {
+                for object in objects! {
+                    reviewsList.append(object)
+                }
+            } else {
+                print(error)
+            }
+        }
     }
     
     func getDataFromUrl(url:NSURL, completion: ((data: NSData?, response: NSURLResponse?, error: NSError? ) -> Void)) {

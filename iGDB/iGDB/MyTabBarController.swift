@@ -10,6 +10,7 @@ import UIKit
 import Parse
 
 var gamesList:[PFObject] = [PFObject]()
+var reviewsList:[PFObject] = [PFObject]()
 
 class MyTabBarController: UITabBarController {
     
