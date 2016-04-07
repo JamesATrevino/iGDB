@@ -48,12 +48,6 @@ class GameDetailViewController: UIViewController {
             imageView.contentMode = .ScaleAspectFit
             downloadImage(checkedUrl!)
         }
-        
-        for gamez in reviewsList {
-            if gamez["gamename"] as! String == game!["name"] as! String {
-                self.gameReview.append(gamez)
-            }
-        }
     }
     
     func getDataFromUrl(url:NSURL, completion: ((data: NSData?, response: NSURLResponse?, error: NSError? ) -> Void)) {
@@ -89,8 +83,14 @@ class GameDetailViewController: UIViewController {
             reviewViewVC.game = game
         }
         else if segue.identifier == "allReviews" {
+            gameReview.removeAll()
+            for gamez in reviewsList {
+                if gamez["gamename"] as! String == game!["name"] as! String {
+                    self.gameReview.append(gamez)
+                }
+            }
             let userReviews:ReviewTableViewController = (segue.destinationViewController as? ReviewTableViewController)!
-             userReviews.gameReview = self.gameReview
+            userReviews.gameReview = self.gameReview
         }
         
         //let indexPath = self.tableView.indexPathForCell(sender as! UITableViewCell)
