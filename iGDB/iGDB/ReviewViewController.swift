@@ -114,27 +114,33 @@ class ReviewViewController: UIViewController, UITextFieldDelegate {
         
         if(Int(stepper.value) >= 1) {
             star1.setImage(UIImage(named: "filledStar.png"), forState: .Normal)
+        } else {
+            star1.setImage(UIImage(named: "emptyStar.png"), forState: .Normal)
         }
         
         if(Int(stepper.value) >= 2) {
             star2.setImage(UIImage(named: "filledStar.png"), forState: .Normal)
+        } else {
+            star2.setImage(UIImage(named: "emptyStar.png"), forState: .Normal)
         }
         
         if(Int(stepper.value) >= 3) {
             star3.setImage(UIImage(named: "filledStar.png"), forState: .Normal)
+        } else {
+            star3.setImage(UIImage(named: "emptyStar.png"), forState: .Normal)
         }
         
         if(Int(stepper.value) >= 4) {
             star4.setImage(UIImage(named: "filledStar.png"), forState: .Normal)
+        } else {
+            star4.setImage(UIImage(named: "emptyStar.png"), forState: .Normal)
         }
         
         if(Int(stepper.value) >= 5) {
             star5.setImage(UIImage(named: "filledStar.png"), forState: .Normal)
+        } else {
+            star5.setImage(UIImage(named: "emptyStar.png"), forState: .Normal)
         }
-        
-        
-        
-        
     }
 
     @IBAction func submitPressed(sender: AnyObject){
