@@ -18,6 +18,7 @@ class GameDetailViewController: UIViewController {
     @IBOutlet weak var summaryLabel: UITextView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
     
     var gameReview:[PFObject] = [PFObject]()
     
@@ -27,6 +28,12 @@ class GameDetailViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(false, animated: false)
         
         // Do any additional setup after loading the view.
+        
+        let convertedDate = game!.updatedAt
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateStyle = NSDateFormatterStyle.FullStyle
+        let date2 = dateFormatter.stringFromDate((convertedDate)!)
+        
         let name = game!["name"]
         titleLabel.text = name as? String
         //self.title = name as? String
@@ -34,6 +41,7 @@ class GameDetailViewController: UIViewController {
         platformsLabel.text = game!["platform"] as? String
         let metaCritic = game!["rating"] as? Double
         metacriticLabel.text = "No metacritic data available"
+        self.dateLabel.text = date2
         
         if metaCritic != nil
         {

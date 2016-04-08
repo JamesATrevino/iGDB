@@ -20,6 +20,13 @@ class ReviewViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var userScore: UILabel!
     @IBOutlet weak var stepper: UIStepper!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var star1: UIButton!
+    @IBOutlet weak var star2: UIButton!
+    @IBOutlet weak var star3: UIButton!
+    @IBOutlet weak var star4: UIButton!
+    @IBOutlet weak var star5: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,8 +35,14 @@ class ReviewViewController: UIViewController, UITextFieldDelegate {
         self.title = "Write A Review" // as? String
         gameLabel.text = game!["name"] as? String
         
+        let convertedDate = game!.updatedAt
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateStyle = NSDateFormatterStyle.FullStyle
+        let date2 = dateFormatter.stringFromDate((convertedDate)!)
+        
         self.commentField.delegate = self
         self.mywidth.constant = self.view.bounds.size.width
+        self.dateLabel.text = date2 //as? String
         
         let url = game!["image"] as? String
         if url != "not set"
@@ -98,6 +111,30 @@ class ReviewViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func stepperAction(sender: AnyObject) {
         userScore.text = "\(Int(stepper.value))"
+        
+        if(Int(stepper.value) >= 1) {
+            star1.setImage(UIImage(named: "filledStar.png"), forState: .Normal)
+        }
+        
+        if(Int(stepper.value) >= 2) {
+            star2.setImage(UIImage(named: "filledStar.png"), forState: .Normal)
+        }
+        
+        if(Int(stepper.value) >= 3) {
+            star3.setImage(UIImage(named: "filledStar.png"), forState: .Normal)
+        }
+        
+        if(Int(stepper.value) >= 4) {
+            star4.setImage(UIImage(named: "filledStar.png"), forState: .Normal)
+        }
+        
+        if(Int(stepper.value) >= 5) {
+            star5.setImage(UIImage(named: "filledStar.png"), forState: .Normal)
+        }
+        
+        
+        
+        
     }
 
     @IBAction func submitPressed(sender: AnyObject){
