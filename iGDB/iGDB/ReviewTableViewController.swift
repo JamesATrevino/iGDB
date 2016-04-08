@@ -44,7 +44,7 @@ class ReviewTableViewController: UITableViewController {
         
         (cell as! ReviewTableViewCell).username?.text = (username as! String)
         (cell as! ReviewTableViewCell).rating?.text = ("\(rating)")
-        (cell as! ReviewTableViewCell).comment.text = comment as! String
+        (cell as! ReviewTableViewCell).comment.text = comment as? String
         
         return cell
     }
