@@ -120,7 +120,8 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
                 else
                 {
                     let alert = UIAlertController(title: "Success", message:"Signup Successful", preferredStyle: .Alert)
-                    alert.addAction(UIAlertAction(title: "OK", style: .Default) { _ in })
+                    alert.addAction(UIAlertAction(title: "OK", style: .Default) { _ in
+                        self.performSegueWithIdentifier("accountDone", sender: self)})
                     self.presentViewController(alert, animated: true){}
                 }
             })

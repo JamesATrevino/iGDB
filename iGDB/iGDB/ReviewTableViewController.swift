@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import Parse
 
 class ReviewTableViewController: UITableViewController {
+    
+    var gameReview:[PFObject]? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,22 +30,21 @@ class ReviewTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return reviewsList.count
+        return gameReview!.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("rdbID", forIndexPath: indexPath)
         
-        let review = reviewsList[indexPath.row]
+        let review = gameReview![indexPath.row]
+        let username = review["username"]
+        let rating = review["userRating"]
+        let comment = review["userComment"]
         
-        /*if searchController.active && searchController.searchBar.text != "" {
-            game = filteredGames[indexPath.row]
-        }*/
-        
-        let username = review["userId"]
-        
-        cell.textLabel?.text = (username as! String)
+        (cell as! ReviewTableViewCell).username?.text = (username as! String)
+        (cell as! ReviewTableViewCell).rating?.text = ("\(rating)")
+        (cell as! ReviewTableViewCell).comment.text = comment as! String
         
         return cell
     }

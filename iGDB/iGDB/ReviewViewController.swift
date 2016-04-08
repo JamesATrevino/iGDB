@@ -117,7 +117,21 @@ class ReviewViewController: UIViewController, UITextFieldDelegate {
             if (success) {
                 let alert = UIAlertController(title: "Success!", message:
                     "Your review has been submitted. To return to the game entry, use the navigation bar.", preferredStyle: .Alert)
-                alert.addAction(UIAlertAction(title: "OK", style: .Default) { _ in })
+                alert.addAction(UIAlertAction(title: "OK", style: .Default) { _ in
+                    print("before ok clicked \(reviewsList.count)")
+                    reviewsList.removeAll()
+                    print("after removeAll \(reviewsList.count)")
+                    let r_query = PFQuery(className: "UserRatings")
+                    r_query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
+                        if error == nil {
+                            for object in objects! {
+                                reviewsList.append(object)
+                            }
+                        } else {
+                            print(error)
+                        }
+                    }
+                    print("after querying again \(reviewsList.count)")})
                 self.presentViewController(alert, animated: true){}
             } else {
                 let alert = UIAlertController(title: "Oops!", message: "There was an error sending your review. Please try again.", preferredStyle: .Alert)

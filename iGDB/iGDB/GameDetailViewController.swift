@@ -17,6 +17,7 @@ class GameDetailViewController: UIViewController {
     @IBOutlet weak var studioLabel: UILabel!
     @IBOutlet weak var summaryLabel: UITextView!
     @IBOutlet weak var imageView: UIImageView!
+    var gameReview:[PFObject] = [PFObject]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,18 +47,6 @@ class GameDetailViewController: UIViewController {
             let checkedUrl = NSURL(string: url!)
             imageView.contentMode = .ScaleAspectFit
             downloadImage(checkedUrl!)
-        }
-        
-        let r_query = PFQuery(className: "UserRatings")
-        
-        r_query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
-            if error == nil {
-                for object in objects! {
-                    reviewsList.append(object)
-                }
-            } else {
-                print(error)
-            }
         }
     }
     
@@ -89,8 +78,20 @@ class GameDetailViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        let reviewViewVC:ReviewViewController = (segue.destinationViewController as? ReviewViewController)!
-        reviewViewVC.game = game
+        if segue.identifier == "rateGame" {
+            let reviewViewVC:ReviewViewController = (segue.destinationViewController as? ReviewViewController)!
+            reviewViewVC.game = game
+        }
+        else if segue.identifier == "allReviews" {
+            gameReview.removeAll()
+            for gamez in reviewsList {
+                if gamez["gamename"] as! String == game!["name"] as! String {
+                    self.gameReview.append(gamez)
+                }
+            }
+            let userReviews:ReviewTableViewController = (segue.destinationViewController as? ReviewTableViewController)!
+            userReviews.gameReview = self.gameReview
+        }
         
         //let indexPath = self.tableView.indexPathForCell(sender as! UITableViewCell)
         /*let indexPath = tableView.indexPathForSelectedRow
