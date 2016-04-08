@@ -12,6 +12,7 @@ import Parse
 class AccountDetailsViewController: UIViewController {
 
     @IBOutlet var username: UILabel!
+    @IBOutlet weak var email: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +20,7 @@ class AccountDetailsViewController: UIViewController {
         // Do any additional setup after loading the view.
         let currentUser = PFUser.currentUser()!.username
         username.text = currentUser
+        email.text = PFUser.currentUser()!.email
     }
 
     override func didReceiveMemoryWarning() {

@@ -17,6 +17,8 @@ class GameDetailViewController: UIViewController {
     @IBOutlet weak var studioLabel: UILabel!
     @IBOutlet weak var summaryLabel: UITextView!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    
     var gameReview:[PFObject] = [PFObject]()
     
     override func viewDidLoad() {
@@ -26,7 +28,8 @@ class GameDetailViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         let name = game!["name"]
-        self.title = name as? String
+        titleLabel.text = name as? String
+        //self.title = name as? String
         yearLabel.text = String(game!["year"] as! Int)
         platformsLabel.text = game!["platform"] as? String
         let metaCritic = game!["rating"] as? Double
