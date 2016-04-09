@@ -11,13 +11,14 @@ James Trevino: 30%
 - Worked on setting up Discuss page
 
 Jason Ngo: 35%
-- Implemented search feature
+- Implemented entire search feature
 - Bug fixes from Alpha
 - Some of User Reviews / Ratings feature
 
 Differences:
-- Updated visual look of the app to be cleaner
-- Rather than a 'rating feature' we upgraded to user Reviews
+- We updated the visual look of the app to be cleaner.
+- Rather than a 'rating feature' we upgraded to user Reviews.
 - In our idea paper the search feature was SQL based, but based on feedback
-  we changed it to be 'real' search. (e.g. you can search with just normal words)
-- Discuss page was not in beta and is a work in progress.
+  we changed it to be 'real' search.
+- The Discuss tab was not in the beta release plan and is a work in progress.
+- The 'View All My Reviews' was put into the Account Details tab.
