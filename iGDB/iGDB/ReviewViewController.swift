@@ -166,11 +166,15 @@ class ReviewViewController: UIViewController, UITextFieldDelegate {
                     print("after removeAll \(reviewsList.count)")
                     let r_query = PFQuery(className: "UserRatings")
                     r_query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
-                        if error == nil {
+                        if error == nil
+                        {
                             for object in objects! {
                                 reviewsList.append(object)
                             }
-                        } else {
+                        }
+                        
+                        else
+                        {
                             print(error)
                         }
                     }

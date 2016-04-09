@@ -8,7 +8,7 @@
 
 import UIKit
 import Parse
-class GameDetailViewController: UIViewController {
+class GameDetailViewController: UIViewController, UIScrollViewDelegate {
     
     var game:PFObject?
     @IBOutlet weak var yearLabel: UILabel!
@@ -19,11 +19,16 @@ class GameDetailViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     
     var gameReview:[PFObject] = [PFObject]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.scrollView.delegate = self
+        self.scrollView.scrollEnabled = true
+        self.scrollView.frame = self.view.frame
         
         self.navigationController?.setNavigationBarHidden(false, animated: false)
         
