@@ -11,6 +11,8 @@ import Parse
 class GameDetailViewController: UIViewController, UIScrollViewDelegate {
     
     var game:PFObject?
+    var gameReview:[PFObject] = [PFObject]()
+    
     @IBOutlet weak var yearLabel: UILabel!
     @IBOutlet weak var platformsLabel: UILabel!
     @IBOutlet weak var metacriticLabel: UILabel!
@@ -21,14 +23,8 @@ class GameDetailViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
     
-    
-    var gameReview:[PFObject] = [PFObject]()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.scrollView.delegate = self
-        self.scrollView.scrollEnabled = true
-        self.scrollView.frame = self.view.frame
         
         self.navigationController?.setNavigationBarHidden(false, animated: false)
         
@@ -98,6 +94,7 @@ class GameDetailViewController: UIViewController, UIScrollViewDelegate {
             let reviewViewVC:ReviewViewController = (segue.destinationViewController as? ReviewViewController)!
             reviewViewVC.game = game
         }
+            
         else if segue.identifier == "allReviews" {
             gameReview.removeAll()
             for gamez in reviewsList {

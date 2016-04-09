@@ -11,6 +11,8 @@ import Parse
 
 class AccountDetailsViewController: UIViewController {
 
+    var gameReview:[PFObject] = [PFObject]()
+    
     @IBOutlet var username: UILabel!
     @IBOutlet weak var email: UILabel!
     
@@ -20,7 +22,7 @@ class AccountDetailsViewController: UIViewController {
         // Do any additional setup after loading the view.
         let currentUser = PFUser.currentUser()!.username
         username.text = currentUser
-        email.text = PFUser.currentUser()!.email
+        email.text = "You haven't added an email address." //PFUser.currentUser()!.email
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,15 +30,19 @@ class AccountDetailsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
+        gameReview.removeAll()
+            
+        for games in reviewsList {
+            if games["userID"] as? String == (PFUser.currentUser())!.objectId
+            {
+                self.gameReview.append(games)
+            }
+        }
+            
+        let userReviews:MyReviewsController = (segue.destinationViewController as? MyReviewsController)!
+        userReviews.gameReview = self.gameReview
     }
-    */
 
 }

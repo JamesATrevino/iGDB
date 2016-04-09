@@ -169,7 +169,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ect-7w-Fnu">
-                                <rect key="frame" x="13" y="0.0" width="389" height="679"/>
+                                <rect key="frame" x="13" y="0.0" width="389" height="950"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This is a really long title you" textAlignment="natural" lineBreakMode="characterWrap" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Txg-lC-2B7">
                                         <rect key="frame" x="5" y="-3" width="366" height="44"/>
@@ -211,7 +211,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ze-aL-QVK">
                                         <rect key="frame" x="194" y="286" width="183" height="30"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="See User Reviews">
+                                        <state key="normal" title="See All User Reviews">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -363,7 +363,7 @@
                                     <constraint firstItem="hed-fh-xbr" firstAttribute="leading" secondItem="Lrx-pZ-nqW" secondAttribute="leading" id="ctg-BL-7Sv"/>
                                     <constraint firstItem="XOg-P3-0Ha" firstAttribute="baseline" secondItem="KQ6-lY-FdG" secondAttribute="firstBaseline" id="d45-cs-Pfx"/>
                                     <constraint firstItem="NU4-HG-VAP" firstAttribute="trailing" secondItem="6ze-aL-QVK" secondAttribute="trailing" constant="33" id="ebo-CU-clv"/>
-                                    <constraint firstAttribute="bottom" secondItem="NU4-HG-VAP" secondAttribute="bottom" constant="121" id="gOX-rK-Iyl"/>
+                                    <constraint firstAttribute="bottom" secondItem="NU4-HG-VAP" secondAttribute="bottom" constant="392" id="gOX-rK-Iyl"/>
                                     <constraint firstItem="xy9-XP-K7X" firstAttribute="top" secondItem="AfR-qz-oPS" secondAttribute="bottom" constant="10" id="iRh-hg-hrI"/>
                                     <constraint firstItem="NU4-HG-VAP" firstAttribute="centerX" secondItem="AfR-qz-oPS" secondAttribute="centerX" constant="33" id="ifI-zf-OJu"/>
                                     <constraint firstItem="GFb-Np-GPS" firstAttribute="leading" secondItem="gRY-ir-U1Z" secondAttribute="trailing" constant="8" symbolic="YES" id="jaU-cS-Fzb"/>
@@ -388,7 +388,7 @@
                         <constraints>
                             <constraint firstItem="ect-7w-Fnu" firstAttribute="centerX" secondItem="DEz-tv-tWa" secondAttribute="centerX" id="2jp-tK-gmf"/>
                             <constraint firstItem="ect-7w-Fnu" firstAttribute="top" secondItem="DEz-tv-tWa" secondAttribute="top" id="55M-ZN-vrb"/>
-                            <constraint firstAttribute="bottom" secondItem="ect-7w-Fnu" secondAttribute="bottom" constant="8" id="BMK-cj-dj6"/>
+                            <constraint firstAttribute="bottom" secondItem="ect-7w-Fnu" secondAttribute="bottom" constant="-263" id="BMK-cj-dj6"/>
                             <constraint firstItem="ect-7w-Fnu" firstAttribute="leading" secondItem="DEz-tv-tWa" secondAttribute="leadingMargin" constant="-7" id="Jhr-3b-FQs"/>
                         </constraints>
                     </view>
@@ -917,43 +917,61 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CjP-Ci-uKa">
-                                <rect key="frame" x="20" y="88" width="374" height="86"/>
+                                <rect key="frame" x="20" y="80" width="374" height="86"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXP-NL-4h4">
-                                <rect key="frame" x="32" y="105" width="84" height="21"/>
+                                <rect key="frame" x="32" y="97" width="84" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&lt;username&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lVs-Ns-V7u">
-                                <rect key="frame" x="32" y="134" width="342" height="21"/>
+                                <rect key="frame" x="32" y="126" width="342" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhM-rR-eLc">
-                                <rect key="frame" x="20" y="190" width="374" height="86"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhM-rR-eLc">
+                                <rect key="frame" x="20" y="174" width="374" height="86"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&lt;email&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VEI-jF-EE2">
-                                <rect key="frame" x="32" y="236" width="342" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&lt;email&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VEI-jF-EE2">
+                                <rect key="frame" x="32" y="221" width="342" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email Address:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u9T-cW-gD8">
-                                <rect key="frame" x="32" y="207" width="113" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email Address:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u9T-cW-gD8">
+                                <rect key="frame" x="32" y="192" width="113" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dCa-VA-kPh">
+                                <rect key="frame" x="20" y="268" width="374" height="88"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rated Games:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ylj-up-8hU">
+                                <rect key="frame" x="32" y="288" width="108" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yVO-h5-nO2">
+                                <rect key="frame" x="32" y="317" width="342" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="View All My Reviews"/>
+                                <connections>
+                                    <segue destination="toB-Kl-aZI" kind="show" identifier="myReviews" id="szk-VJ-F8W"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.85925910780000003" green="0.85925910780000003" blue="0.85925910780000003" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -966,6 +984,60 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1ax-Uv-q0f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2027" y="145"/>
+        </scene>
+        <!--My Reviews Controller-->
+        <scene sceneID="41G-pw-raX">
+            <objects>
+                <tableViewController id="toB-Kl-aZI" customClass="MyReviewsController" customModule="iGDB" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="104" sectionHeaderHeight="28" sectionFooterHeight="28" id="qSq-Cd-oEc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="separatorColor" red="0.47893488220000002" green="0.47893488220000002" blue="0.47893488220000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myrb" rowHeight="104" id="ZNj-v6-hHw" customClass="MyReviewCell" customModule="iGDB" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="414" height="104"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZNj-v6-hHw" id="iXi-VJ-k9O">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="103"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" text="This is a sample review" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M2h-iS-zPi" userLabel="Comment">
+                                            <rect key="frame" x="16" y="31" width="299" height="55"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Game Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bzh-hy-Mb2" userLabel="GameTitle">
+                                            <rect key="frame" x="16" y="8" width="308" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X4S-Wo-WV4" userLabel="Rating">
+                                            <rect key="frame" x="332" y="18" width="68" height="68"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="comment" destination="M2h-iS-zPi" id="J0k-ba-0Mb"/>
+                                    <outlet property="gametitle" destination="bzh-hy-Mb2" id="pnC-Sy-GcZ"/>
+                                    <outlet property="rating" destination="X4S-Wo-WV4" id="l6S-cK-vk9"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="toB-Kl-aZI" id="pw6-J4-1V9"/>
+                            <outlet property="delegate" destination="toB-Kl-aZI" id="h9T-we-cnY"/>
+                        </connections>
+                    </tableView>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x9c-Th-drv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2531" y="145"/>
         </scene>
         <!--Help & FAQ-->
         <scene sceneID="Bgh-28-JDt">

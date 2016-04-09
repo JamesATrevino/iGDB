@@ -33,6 +33,8 @@
 		7FDCC67A1CB557B100A9806E /* CommentsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDCC6791CB557B100A9806E /* CommentsDetailViewController.swift */; };
 		845580ED1CB5CFA900AD3360 /* ReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845580EC1CB5CFA800AD3360 /* ReviewTableViewCell.swift */; };
 		FC91CABC1CB332870016BBF9 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC91CABB1CB332870016BBF9 /* RatingControl.swift */; };
+		FC9E5CD21CB8A55F00981D88 /* MyReviewsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9E5CD11CB8A55F00981D88 /* MyReviewsController.swift */; };
+		FC9E5CD41CB8A66F00981D88 /* MyReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9E5CD31CB8A66F00981D88 /* MyReviewCell.swift */; };
 		FCBD8BE91CA22939000215A5 /* DatabaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBD8BE81CA22939000215A5 /* DatabaseTableViewController.swift */; };
 		FCD5131B1CB5943100A13A10 /* ReviewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD5131A1CB5943100A13A10 /* ReviewTableViewController.swift */; };
 		FCF0B5E41CB3276900DA192E /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF0B5E31CB3276900DA192E /* ReviewViewController.swift */; };
@@ -67,6 +69,8 @@
 		7FDCC6791CB557B100A9806E /* CommentsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsDetailViewController.swift; sourceTree = "<group>"; };
 		845580EC1CB5CFA800AD3360 /* ReviewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewTableViewCell.swift; sourceTree = "<group>"; };
 		FC91CABB1CB332870016BBF9 /* RatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
+		FC9E5CD11CB8A55F00981D88 /* MyReviewsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyReviewsController.swift; sourceTree = "<group>"; };
+		FC9E5CD31CB8A66F00981D88 /* MyReviewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyReviewCell.swift; sourceTree = "<group>"; };
 		FCBD8BE81CA22939000215A5 /* DatabaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseTableViewController.swift; sourceTree = "<group>"; };
 		FCD5131A1CB5943100A13A10 /* ReviewTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewTableViewController.swift; sourceTree = "<group>"; };
 		FCF0B5E31CB3276900DA192E /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +137,8 @@
 				7F6FA94E1CA301D700F37D52 /* GameDetailViewController.swift */,
 				FCF0B5E31CB3276900DA192E /* ReviewViewController.swift */,
 				FC91CABB1CB332870016BBF9 /* RatingControl.swift */,
+				FC9E5CD11CB8A55F00981D88 /* MyReviewsController.swift */,
+				FC9E5CD31CB8A66F00981D88 /* MyReviewCell.swift */,
 				FCD5131A1CB5943100A13A10 /* ReviewTableViewController.swift */,
 				845580EC1CB5CFA800AD3360 /* ReviewTableViewCell.swift */,
 				FCBD8BE81CA22939000215A5 /* DatabaseTableViewController.swift */,
@@ -221,6 +227,8 @@
 				FCBD8BE91CA22939000215A5 /* DatabaseTableViewController.swift in Sources */,
 				7F6FA94F1CA301D700F37D52 /* GameDetailViewController.swift in Sources */,
 				FCF0B5E41CB3276900DA192E /* ReviewViewController.swift in Sources */,
+				FC9E5CD21CB8A55F00981D88 /* MyReviewsController.swift in Sources */,
+				FC9E5CD41CB8A66F00981D88 /* MyReviewCell.swift in Sources */,
 				FCD5131B1CB5943100A13A10 /* ReviewTableViewController.swift in Sources */,
 				7F6FA94B1CA2152600F37D52 /* RegistrationViewController.swift in Sources */,
 				7FDCC6781CB4C70300A9806E /* DiscussViewController.swift in Sources */,
