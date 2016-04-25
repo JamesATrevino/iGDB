@@ -1,24 +1,23 @@
 # iGDB
-iGDB iOS Beta Release
+iGDB iOS Final Release
 
 Contributions:
 
-Marcus Cruz: 35%
-- Updated app visual design
-- Implemented most of User Reviews / Rating feature
+Marcus Cruz: 33%
+- Some newsfeed
 
-James Trevino: 30%
-- Worked on setting up Discuss page
+James Trevino: 33%
+- Discuss
 
-Jason Ngo: 35%
-- Implemented entire search feature
-- Bug fixes from Alpha
-- Some of User Reviews / Ratings feature
+Jason Ngo: 33%
+- Some newsfeed
 
 Differences:
-- We updated the visual look of the app to be cleaner.
-- Rather than a 'rating feature' we upgraded to user Reviews.
-- In our idea paper the search feature was SQL based, but based on feedback
-  we changed it to be 'real' search.
-- The Discuss tab was not in the beta release plan and is a work in progress.
-- The 'View All My Reviews' was put into the Account Details tab.
+- ...
+
+
+
+Sources:
+
+http://stackoverflow.com/questions/446405/adjust-uilabel-height-depending-on-the-text
+https://medium.com/@cwRichardKim/ios-xcode-tutorial-a-card-based-newsfeed-8bedeb7b8df7#.vw19ux40e

@@ -101,7 +101,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="tja-Oz-PcC" kind="relationship" relationship="viewControllers" id="01q-2F-uZ3"/>
+                        <segue destination="EdB-Ss-fHh" kind="relationship" relationship="viewControllers" id="AFe-Ve-7Up"/>
                         <segue destination="Vkd-1h-AJr" kind="relationship" relationship="viewControllers" id="P6c-fP-D8K"/>
                         <segue destination="9FC-pm-dTM" kind="relationship" relationship="viewControllers" id="0gL-sJ-9Y0"/>
                         <segue destination="xAn-dw-b4B" kind="relationship" relationship="viewControllers" id="DUO-ec-vTY"/>
@@ -1222,34 +1222,111 @@
             </objects>
             <point key="canvasLocation" x="-491" y="-822"/>
         </scene>
-        <!--NewsFeed-->
-        <scene sceneID="SXs-yY-ah6">
+        <!--Newsfeed-->
+        <scene sceneID="wTz-im-eIx">
             <objects>
-                <viewController title="NewsFeed" id="tja-Oz-PcC" customClass="ViewController" customModule="iGDB" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="gx9-pq-yzH"/>
-                        <viewControllerLayoutGuide type="bottom" id="cJg-e2-VW3"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="uW3-U6-xs3">
+                <tableViewController title="Newsfeed" id="EdB-Ss-fHh" customClass="NewsfeedTableViewController" customModule="iGDB" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="200" sectionHeaderHeight="28" sectionFooterHeight="28" id="Bo2-28-mU5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="customCard" rowHeight="200" id="dYj-Wb-tdC" customClass="CardCell" customModule="iGDB" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="414" height="200"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dYj-Wb-tdC" id="ZYZ-0O-zJR">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="199"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ocn-gc-wao">
+                                            <rect key="frame" x="8" y="8" width="398" height="183"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="News Article Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D0Y-C9-q3Y">
+                                                    <rect key="frame" x="11" y="10" width="376" height="36"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4zY-m0-7aD">
+                                                    <rect key="frame" x="8" y="52" width="263" height="117"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                                </textView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ahv-mg-fYn">
+                                                    <rect key="frame" x="279" y="52" width="111" height="111"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.85925910780000003" green="0.85925910780000003" blue="0.85925910780000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="cardView" destination="ocn-gc-wao" id="QOG-Xz-lKZ"/>
+                                    <outlet property="image" destination="ahv-mg-fYn" id="VLv-jA-STt"/>
+                                    <outlet property="newsImage" destination="ahv-mg-fYn" id="hGW-L2-TSA"/>
+                                    <outlet property="newsText" destination="4zY-m0-7aD" id="ZtE-2H-lzJ"/>
+                                    <outlet property="newsTitle" destination="D0Y-C9-q3Y" id="tg2-tu-F6y"/>
+                                    <outlet property="text" destination="4zY-m0-7aD" id="BgD-gu-YUp"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="EdB-Ss-fHh" id="LL3-9A-0Md"/>
+                            <outlet property="delegate" destination="EdB-Ss-fHh" id="q93-1o-wTT"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Newsfeed" image="NewsIcon" id="lUr-9Q-iyc"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="newsfeed" destination="Bo2-28-mU5" id="Luz-sg-VHK"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qb0-31-1HR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-9" y="1338"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="HhI-KE-jBc">
+            <objects>
+                <viewController id="4h3-2K-i7l" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tG4-sd-XeZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="b4y-NG-Ggw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jLK-h0-ihj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="News Section Coming Soon" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wF9-dp-2AG">
-                                <rect key="frame" x="40" y="72" width="334" height="207"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cxm-Dg-cKa">
+                                <rect key="frame" x="20" y="34" width="374" height="45"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="23"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="By Author Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="30F-V8-4kQ">
+                                <rect key="frame" x="20" y="87" width="194" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Article Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gVw-za-XnX">
+                                <rect key="frame" x="222" y="87" width="172" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.85925910780000003" green="0.85925910780000003" blue="0.85925910780000003" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="NewsFeed" image="NewsIcon" id="CMl-TY-khx"/>
-                    <navigationItem key="navigationItem" id="sQb-HZ-7S9"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="d0e-y0-meM" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f3N-yI-mdD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="231" y="1245"/>
+            <point key="canvasLocation" x="-459" y="1338"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0Jd-zq-W0Y">
