@@ -154,7 +154,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h3A-OJ-ma3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1401" y="1082"/>
+            <point key="canvasLocation" x="1045" y="1090"/>
         </scene>
         <!--Game Detail View Controller-->
         <scene sceneID="MZz-X5-Ptg">
@@ -407,7 +407,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GZ5-wf-HlX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2126" y="956"/>
+            <point key="canvasLocation" x="1574" y="1090"/>
         </scene>
         <!--Review Game-->
         <scene sceneID="IeQ-IG-jSJ">
@@ -617,7 +617,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rs7-tq-25P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2631" y="956"/>
+            <point key="canvasLocation" x="2123" y="1090"/>
         </scene>
         <!--Reviews-->
         <scene sceneID="M8c-Mo-aB6">
@@ -675,7 +675,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cE5-Hc-4Kh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2451" y="1895"/>
+            <point key="canvasLocation" x="1574" y="1975"/>
         </scene>
         <!--IgDB Discuss-->
         <scene sceneID="2xn-mF-R7T">
@@ -735,7 +735,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fls-7B-Uj8" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="862" y="1245"/>
+            <point key="canvasLocation" x="526" y="1090"/>
         </scene>
         <!--Comments Detail View Controller-->
         <scene sceneID="Nor-AW-8h2">
@@ -799,7 +799,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gxS-fh-UkL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="862" y="2101"/>
+            <point key="canvasLocation" x="526" y="1981"/>
         </scene>
         <!--Settings-->
         <scene sceneID="RMo-QB-0Ks">
@@ -902,7 +902,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0v4-L4-8iW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1513" y="-164"/>
+            <point key="canvasLocation" x="785" y="180"/>
         </scene>
         <!--Account Details View Controller-->
         <scene sceneID="FXz-Ne-jTg">
@@ -983,7 +983,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1ax-Uv-q0f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2027" y="145"/>
+            <point key="canvasLocation" x="1371" y="180"/>
         </scene>
         <!--My Reviews Controller-->
         <scene sceneID="41G-pw-raX">
@@ -1037,7 +1037,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x9c-Th-drv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2531" y="145"/>
+            <point key="canvasLocation" x="1927" y="180"/>
         </scene>
         <!--Help & FAQ-->
         <scene sceneID="Bgh-28-JDt">
@@ -1096,7 +1096,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PxP-Oz-5E8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2027" y="-1490"/>
+            <point key="canvasLocation" x="1371" y="-1462"/>
         </scene>
         <!--Contact Us-->
         <scene sceneID="JLX-wL-KEi">
@@ -1151,7 +1151,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dWS-K6-R9D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2027" y="-676"/>
+            <point key="canvasLocation" x="1371" y="-656"/>
         </scene>
         <!--Register-->
         <scene sceneID="BQD-qy-ARB">
@@ -1230,6 +1230,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexBackgroundColor" red="0.85925910780000003" green="0.85925910780000003" blue="0.85925910780000003" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="customCard" rowHeight="200" id="dYj-Wb-tdC" customClass="CardCell" customModule="iGDB" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="414" height="200"/>
@@ -1271,6 +1272,7 @@
                                     <outlet property="newsText" destination="4zY-m0-7aD" id="ZtE-2H-lzJ"/>
                                     <outlet property="newsTitle" destination="D0Y-C9-q3Y" id="tg2-tu-F6y"/>
                                     <outlet property="text" destination="4zY-m0-7aD" id="BgD-gu-YUp"/>
+                                    <segue destination="4h3-2K-i7l" kind="show" id="SYU-HC-ddf"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -1287,7 +1289,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qb0-31-1HR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-9" y="1338"/>
+            <point key="canvasLocation" x="-41" y="1090"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="HhI-KE-jBc">
@@ -1298,35 +1300,83 @@
                         <viewControllerLayoutGuide type="bottom" id="b4y-NG-Ggw"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="jLK-h0-ihj">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cxm-Dg-cKa">
-                                <rect key="frame" x="20" y="34" width="374" height="45"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="23"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="By Author Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="30F-V8-4kQ">
-                                <rect key="frame" x="20" y="87" width="194" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Article Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gVw-za-XnX">
-                                <rect key="frame" x="222" y="87" width="172" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="SCW-D4-2cc">
+                                <rect key="frame" x="6" y="75" width="226" height="29"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News Article Title Here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPB-bq-eWT">
+                                        <rect key="frame" x="0.0" y="0.0" width="226" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="24"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ySU-wk-b7o">
+                                <rect key="frame" x="6" y="134" width="402" height="215"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6vr-eU-ASr">
+                                        <rect key="frame" x="0.0" y="0.0" width="402" height="215"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="O7w-y7-O0b">
+                                <rect key="frame" x="6" y="106" width="125" height="21"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By Author Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cjR-e6-LjS">
+                                        <rect key="frame" x="0.0" y="0.0" width="125" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="CKp-MT-Lck">
+                                <rect key="frame" x="372" y="106" width="36" height="21"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="evF-fg-8Nz">
+                                        <rect key="frame" x="0.0" y="0.0" width="36" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zNl-Ic-S9G">
+                                <rect key="frame" x="6" y="357" width="91" height="20"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Article Stuff" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uee-yd-czp">
+                                        <rect key="frame" x="0.0" y="0.0" width="91" height="20"/>
+                                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.85925910780000003" green="0.85925910780000003" blue="0.85925910780000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="O7w-y7-O0b" firstAttribute="top" secondItem="CKp-MT-Lck" secondAttribute="top" id="2pz-Yn-WNu"/>
+                            <constraint firstItem="ySU-wk-b7o" firstAttribute="leading" secondItem="zNl-Ic-S9G" secondAttribute="leading" id="3pV-f6-ETt"/>
+                            <constraint firstItem="O7w-y7-O0b" firstAttribute="leading" secondItem="ySU-wk-b7o" secondAttribute="leading" id="79B-Uz-7Pb"/>
+                            <constraint firstItem="SCW-D4-2cc" firstAttribute="leading" secondItem="O7w-y7-O0b" secondAttribute="leading" id="HvD-Ta-1Fo"/>
+                            <constraint firstItem="ySU-wk-b7o" firstAttribute="top" secondItem="O7w-y7-O0b" secondAttribute="bottom" constant="7" id="IMk-kD-YN0"/>
+                            <constraint firstItem="b4y-NG-Ggw" firstAttribute="top" secondItem="zNl-Ic-S9G" secondAttribute="bottom" constant="310" id="RGc-7b-Emi"/>
+                            <constraint firstItem="SCW-D4-2cc" firstAttribute="leading" secondItem="jLK-h0-ihj" secondAttribute="leadingMargin" constant="-14" id="XeB-ir-fXj"/>
+                            <constraint firstItem="CKp-MT-Lck" firstAttribute="trailing" secondItem="ySU-wk-b7o" secondAttribute="trailing" id="atm-uI-Xie"/>
+                            <constraint firstItem="SCW-D4-2cc" firstAttribute="top" secondItem="tG4-sd-XeZ" secondAttribute="bottom" constant="11" id="ehb-09-h38"/>
+                            <constraint firstItem="zNl-Ic-S9G" firstAttribute="top" secondItem="ySU-wk-b7o" secondAttribute="bottom" constant="8" symbolic="YES" id="f7l-VB-pQ1"/>
+                            <constraint firstItem="ySU-wk-b7o" firstAttribute="centerX" secondItem="jLK-h0-ihj" secondAttribute="centerX" id="jxt-AP-2aA"/>
+                            <constraint firstItem="O7w-y7-O0b" firstAttribute="top" secondItem="SCW-D4-2cc" secondAttribute="bottom" constant="2" id="qiN-FR-IRQ"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f3N-yI-mdD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-459" y="1338"/>
+            <point key="canvasLocation" x="-41" y="1981"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0Jd-zq-W0Y">
