@@ -11,8 +11,13 @@ import UIKit
 class MyReviewCell: UITableViewCell {
 
     @IBOutlet weak var gametitle: UILabel!
-    @IBOutlet weak var comment: UITextField!
-    @IBOutlet weak var rating: UILabel!
+    @IBOutlet weak var comment: UILabel!
+    //@IBOutlet weak var rating: UILabel!
+    @IBOutlet weak var firstStar: UIImageView!
+    @IBOutlet weak var secondStar: UIImageView!
+    @IBOutlet weak var thirdStar: UIImageView!
+    @IBOutlet weak var fourthStar: UIImageView!
+    @IBOutlet weak var fifthStar: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

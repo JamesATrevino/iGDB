@@ -38,12 +38,33 @@ class ReviewTableViewController: UITableViewController {
         
         let review = gameReview![indexPath.row]
         let username = review["username"]
-        let rating = review["userRating"]
+        let rating = review["userRating"] as! Int
         let comment = review["userComment"]
+        let starred = UIImage(named: "filledStar.png")
         
         (cell as! ReviewTableViewCell).username?.text = (username as! String)
-        (cell as! ReviewTableViewCell).rating?.text = ("\(rating)")
         (cell as! ReviewTableViewCell).comment.text = comment as? String
+        
+        if(Int(rating) >= 1) {
+            (cell as! ReviewTableViewCell).firstStar.image = starred
+        }
+        
+        if(Int(rating) >= 2) {
+            (cell as! ReviewTableViewCell).secondStar.image = starred
+        }
+        
+        if(Int(rating) >= 3) {
+            (cell as! ReviewTableViewCell).thirdStar.image = starred
+        }
+        
+        if(Int(rating) >= 4) {
+            (cell as! ReviewTableViewCell).fourthStar.image = starred
+        }
+        
+        if(Int(rating) >= 5) {
+            (cell as! ReviewTableViewCell).fifthStar.image = starred
+        }
+        
         
         return cell
     }
