@@ -15,28 +15,21 @@ class CommentsDetailViewController: UIViewController, UITableViewDelegate, UITab
     @IBOutlet weak var tableView: UITableView!
     
     var game:PFObject?
-    var commentsList:[PFObject] = [PFObject]()
+    var gameComments:[PFObject] = [PFObject]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         let name = game!["name"]
         self.headerLabel.text = String(name) + " comments"
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "commentCell")
-        // Do any additional setup after loading the view.
-        let query = PFQuery(className: "gameComments")
-        query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
-            if error == nil {
-                for object in objects! {
-                    if(String(object["gameId"]) == String(self.game!["objectId"]))
-                    {
-                        self.commentsList.append(object)
-                    }
-
-                }
-            } else {
-                print(error)
+        for item in commentsList
+        {
+            if(String(item["gameId"]) == String(self.game!["name"]))
+            {
+                self.gameComments.append(item)
             }
         }
+        // Do any additional setup after loading the view.
         
     }
 
@@ -46,18 +39,27 @@ class CommentsDetailViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1//gamesList.count
+        return gameComments.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCellWithIdentifier("commentCell", forIndexPath: indexPath)
-        
-        
-       // cell.textLabel?.text = (name as! String)
-        
+        let myFont = UIFont(name: "Helvetica", size:17.0)
+        let comment = gameComments[indexPath.row]
+        cell.textLabel!.numberOfLines = 0;
+        cell.textLabel!.font = myFont
+        cell.textLabel?.text = (comment["comment"] as! String)
         return cell
     }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        let commentObject = commentsList[indexPath.row]
+        let comment = commentObject["comment"] as! String
+        let myFont = UIFont(name: "Helvetica", size:17.0)
+        return comment.heightWithConstrainedWidth(CGFloat(300), font: myFont!)
+    }
+    
+    
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
 
@@ -75,4 +77,13 @@ class CommentsDetailViewController: UIViewController, UITableViewDelegate, UITab
     }
     */
 
+}
+
+extension String{
+    func heightWithConstrainedWidth(width: CGFloat, font: UIFont) -> CGFloat{
+        let constraintRect = CGSize(width: width, height: CGFloat.max)
+        let boundingBox = self.boundingRectWithSize(constraintRect, options: NSStringDrawingOptions.UsesLineFragmentOrigin, attributes: [NSFontAttributeName: font], context: nil)
+        print(ceil(boundingBox.height))
+        return ceil(boundingBox.height)
+    }
 }

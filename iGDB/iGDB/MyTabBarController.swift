@@ -11,6 +11,7 @@ import Parse
 
 var gamesList:[PFObject] = [PFObject]()
 var reviewsList:[PFObject] = [PFObject]()
+var commentsList:[PFObject] = [PFObject]()
 
 class MyTabBarController: UITabBarController {
     
@@ -42,6 +43,16 @@ class MyTabBarController: UITabBarController {
             }
         }
         
+        let c_query = PFQuery(className: "gameComments")
+        c_query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
+            if error == nil {
+                for object in objects! {
+                    commentsList.append(object)
+                }
+            } else {
+                print(error)
+            }
+        }
         // Do any additional setup after loading the view.
     }
 
