@@ -169,12 +169,16 @@
                         <viewControllerLayoutGuide type="bottom" id="ErQ-oX-9oH"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="DEz-tv-tWa">
-                        <rect key="frame" x="0.0" y="64" width="414" height="623"/>
+                        <rect key="frame" x="0.0" y="64" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ect-7w-Fnu">
-                                <rect key="frame" x="13" y="0.0" width="389" height="615"/>
+                                <rect key="frame" x="13" y="0.0" width="389" height="736"/>
                                 <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kmp-jq-IN0">
+                                        <rect key="frame" x="5" y="551" width="376" height="167"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This is a really long title you" textAlignment="natural" lineBreakMode="characterWrap" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Txg-lC-2B7">
                                         <rect key="frame" x="5" y="-3" width="366" height="44"/>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="25"/>
@@ -283,13 +287,6 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kRI-j9-ZAt" userLabel="Bgrnd">
-                                        <rect key="frame" x="5" y="551" width="376" height="154"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" title="Button">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Platforms:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gam-zq-Ruf">
                                         <rect key="frame" x="17" y="452" width="78" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -367,7 +364,7 @@
                                     <constraint firstItem="hed-fh-xbr" firstAttribute="leading" secondItem="Lrx-pZ-nqW" secondAttribute="leading" id="ctg-BL-7Sv"/>
                                     <constraint firstItem="XOg-P3-0Ha" firstAttribute="baseline" secondItem="KQ6-lY-FdG" secondAttribute="firstBaseline" id="d45-cs-Pfx"/>
                                     <constraint firstItem="NU4-HG-VAP" firstAttribute="trailing" secondItem="6ze-aL-QVK" secondAttribute="trailing" constant="33" id="ebo-CU-clv"/>
-                                    <constraint firstAttribute="bottom" secondItem="NU4-HG-VAP" secondAttribute="bottom" constant="57" id="gOX-rK-Iyl"/>
+                                    <constraint firstAttribute="bottom" secondItem="NU4-HG-VAP" secondAttribute="bottom" constant="178" id="gOX-rK-Iyl"/>
                                     <constraint firstItem="xy9-XP-K7X" firstAttribute="top" secondItem="AfR-qz-oPS" secondAttribute="bottom" constant="10" id="iRh-hg-hrI"/>
                                     <constraint firstItem="NU4-HG-VAP" firstAttribute="centerX" secondItem="AfR-qz-oPS" secondAttribute="centerX" constant="33" id="ifI-zf-OJu"/>
                                     <constraint firstItem="GFb-Np-GPS" firstAttribute="leading" secondItem="gRY-ir-U1Z" secondAttribute="trailing" constant="8" symbolic="YES" id="jaU-cS-Fzb"/>
@@ -392,12 +389,16 @@
                         <constraints>
                             <constraint firstItem="ect-7w-Fnu" firstAttribute="centerX" secondItem="DEz-tv-tWa" secondAttribute="centerX" id="2jp-tK-gmf"/>
                             <constraint firstItem="ect-7w-Fnu" firstAttribute="top" secondItem="DEz-tv-tWa" secondAttribute="top" id="55M-ZN-vrb"/>
-                            <constraint firstAttribute="bottom" secondItem="ect-7w-Fnu" secondAttribute="bottom" constant="8" id="BMK-cj-dj6"/>
+                            <constraint firstAttribute="bottom" secondItem="ect-7w-Fnu" secondAttribute="bottom" id="BMK-cj-dj6"/>
                             <constraint firstItem="ect-7w-Fnu" firstAttribute="leading" secondItem="DEz-tv-tWa" secondAttribute="leadingMargin" constant="-7" id="Jhr-3b-FQs"/>
                         </constraints>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="414" height="800"/>
                     <connections>
+                        <outlet property="articleSubview" destination="kmp-jq-IN0" id="5RL-Sn-GBb"/>
                         <outlet property="dateLabel" destination="L0d-G0-zwm" id="guE-La-BOQ"/>
                         <outlet property="imageView" destination="AfR-qz-oPS" id="LVE-dl-Pxj"/>
                         <outlet property="metacriticLabel" destination="GFb-Np-GPS" id="fIv-dF-7rg"/>
@@ -422,11 +423,11 @@
                         <viewControllerLayoutGuide type="bottom" id="vIP-X9-Gs5"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Cme-YS-OSL">
-                        <rect key="frame" x="0.0" y="64" width="414" height="623"/>
+                        <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="Fcf-bz-jmv">
-                                <rect key="frame" x="11" y="0.0" width="393" height="615"/>
+                                <rect key="frame" x="11" y="0.0" width="393" height="664"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TrE-4Z-NJo">
                                         <rect key="frame" x="8" y="347" width="377" height="43"/>
@@ -628,7 +629,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="Reviews" title="Reviews" clearsSelectionOnViewWillAppear="NO" id="EtI-ii-agD" customClass="ReviewTableViewController" customModule="iGDB" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="123" sectionHeaderHeight="28" sectionFooterHeight="28" id="Drx-q3-xum">
-                        <rect key="frame" x="0.0" y="64" width="414" height="623"/>
+                        <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.85925910780000003" green="0.85925910780000003" blue="0.85925910780000003" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="separatorColor" red="0.47893488219895286" green="0.47893488219895286" blue="0.47893488219895286" alpha="1" colorSpace="calibratedRGB"/>
@@ -1334,7 +1335,6 @@
         <!--View Controller-->
         <scene sceneID="HhI-KE-jBc">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="f3N-yI-mdD" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="4h3-2K-i7l" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tG4-sd-XeZ"/>
@@ -1414,6 +1414,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f3N-yI-mdD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-41" y="1981"/>
         </scene>

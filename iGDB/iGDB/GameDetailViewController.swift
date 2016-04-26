@@ -22,6 +22,8 @@ class GameDetailViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var articleSubview: UIView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +31,8 @@ class GameDetailViewController: UIViewController, UIScrollViewDelegate {
         self.navigationController?.setNavigationBarHidden(false, animated: false)
         
         // Do any additional setup after loading the view.
+        
+        //self.scrollView.contentSize = CGSizeMake(900, 800000)
         
         let convertedDate = game!.updatedAt
         let dateFormatter = NSDateFormatter()
