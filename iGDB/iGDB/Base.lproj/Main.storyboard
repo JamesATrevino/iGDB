@@ -645,14 +645,14 @@
                                             <rect key="frame" x="8" y="8" width="398" height="107"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="lcc-KT-pb1">
-                                                    <rect key="frame" x="8" y="38" width="382" height="59"/>
+                                                    <rect key="frame" x="8" y="42" width="382" height="59"/>
                                                     <string key="text">Duis sed metus erat. Nunc dapibus libero vel ipsum cursus auctor a at orci. Etiam Nunc dapibus libero vel ipsum cursus auctor a at orci. Nunc dapibus libero vel ipsum cursus auctor a at orci. </string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N7q-3r-Qz1">
-                                                    <rect key="frame" x="9" y="13" width="79" height="21"/>
+                                                    <rect key="frame" x="8" y="13" width="162" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -1013,39 +1013,39 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" red="0.47893488220000002" green="0.47893488220000002" blue="0.47893488220000002" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myrb" rowHeight="136" id="ZNj-v6-hHw" customClass="MyReviewCell" customModule="iGDB" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="136"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myrb" rowHeight="123" id="ZNj-v6-hHw" customClass="MyReviewCell" customModule="iGDB" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="123"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZNj-v6-hHw" id="iXi-VJ-k9O">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="135"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="122"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZIg-Nd-297">
-                                            <rect key="frame" x="8" y="9" width="398" height="118"/>
+                                            <rect key="frame" x="8" y="8" width="398" height="107"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="emptyStar" translatesAutoresizingMaskIntoConstraints="NO" id="L3G-Wn-rI0">
-                                                    <rect key="frame" x="183" y="8" width="35" height="35"/>
+                                                    <rect key="frame" x="183" y="7" width="35" height="35"/>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="emptyStar" translatesAutoresizingMaskIntoConstraints="NO" id="In5-V7-TPS">
-                                                    <rect key="frame" x="226" y="8" width="35" height="35"/>
+                                                    <rect key="frame" x="226" y="7" width="35" height="35"/>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="emptyStar" translatesAutoresizingMaskIntoConstraints="NO" id="TXQ-fN-mzZ">
-                                                    <rect key="frame" x="269" y="8" width="35" height="35"/>
+                                                    <rect key="frame" x="269" y="7" width="35" height="35"/>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="emptyStar" translatesAutoresizingMaskIntoConstraints="NO" id="duY-zx-b3C">
-                                                    <rect key="frame" x="312" y="8" width="35" height="35"/>
+                                                    <rect key="frame" x="312" y="7" width="35" height="35"/>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="emptyStar" translatesAutoresizingMaskIntoConstraints="NO" id="2ux-69-SmZ">
-                                                    <rect key="frame" x="355" y="8" width="35" height="35"/>
+                                                    <rect key="frame" x="355" y="7" width="35" height="35"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Game Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bzh-hy-Mb2" userLabel="GameTitle">
-                                                    <rect key="frame" x="15" y="15" width="368" height="21"/>
+                                                    <rect key="frame" x="10" y="14" width="160" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="azB-ep-W3u">
-                                                    <rect key="frame" x="10" y="51" width="382" height="59"/>
+                                                    <rect key="frame" x="10" y="46" width="382" height="57"/>
                                                     <string key="text">Duis sed metus erat. Nunc dapibus libero vel ipsum cursus auctor a at orci. Etiam Nunc dapibus libero vel ipsum cursus auctor a at orci. Nunc dapibus libero vel ipsum cursus auctor a at orci. </string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
