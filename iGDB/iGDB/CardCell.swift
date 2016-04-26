@@ -19,9 +19,8 @@ class CardCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        //storyButton.addTarget(self, action: "didTapStory", forControlEvents: .TouchUpInside)
         // Initialization code
+        
     }
     
     override func layoutSubviews() {
