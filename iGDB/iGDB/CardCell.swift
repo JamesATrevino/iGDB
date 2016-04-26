@@ -15,9 +15,12 @@ class CardCell: UITableViewCell {
     @IBOutlet weak var newsText: UITextView!
     @IBOutlet weak var newsTitle: UILabel!
     @IBOutlet weak var cardView: UIView!
+    @IBOutlet weak var storyButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        //storyButton.addTarget(self, action: "didTapStory", forControlEvents: .TouchUpInside)
         // Initialization code
     }
     
@@ -29,6 +32,10 @@ class CardCell: UITableViewCell {
         self.cardView.layer.cornerRadius = 1;
         //self.cardView.layer.shadowOffset = CGSizeMake( 2, 2);
         //self.cardView.layer.shadowRadius = 1;
+    }
+    
+    @IBAction func didTapStory(sender: AnyObject) {
+        UIApplication.sharedApplication().openURL(NSURL(string: "http://www.google.com")!)
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
