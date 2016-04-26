@@ -28,6 +28,9 @@ class DatabaseTableViewController: UITableViewController {
         
         searchController.searchResultsUpdater = self
         searchController.dimsBackgroundDuringPresentation = false
+        searchController.hidesNavigationBarDuringPresentation = false
+        //searchController.searchBar.
+        
         definesPresentationContext = true
         tableView.tableHeaderView = searchController.searchBar
     }
