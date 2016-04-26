@@ -20,6 +20,7 @@ class DatabaseTableViewController: UITableViewController {
     @IBOutlet var searchBar: UISearchBar!
     let searchController = UISearchController(searchResultsController: nil)
     var filteredGames = [PFObject]()
+    //let barStyle: UIBarStyle = 2;
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +30,8 @@ class DatabaseTableViewController: UITableViewController {
         searchController.searchResultsUpdater = self
         searchController.dimsBackgroundDuringPresentation = false
         searchController.hidesNavigationBarDuringPresentation = false
-        //searchController.searchBar.
+        searchController.searchBar.translucent = false
+        //searchController.searchBar.barStyle
         
         definesPresentationContext = true
         tableView.tableHeaderView = searchController.searchBar
