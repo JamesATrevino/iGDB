@@ -93,7 +93,9 @@
         <scene sceneID="ySc-SS-IHj">
             <objects>
                 <tabBarController storyboardIdentifier="TabBarController" title="IgDB TabView Controller" id="iDN-pW-Ds6" customClass="MyTabBarController" customModule="iGDB" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="2qa-fV-zw2"/>
+                    <navigationItem key="navigationItem" title="IGDB" id="2qa-fV-zw2">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="NSm-nB-4kv"/>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="pVF-5N-N35">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
@@ -622,43 +624,50 @@
         <!--Reviews-->
         <scene sceneID="M8c-Mo-aB6">
             <objects>
-                <tableViewController storyboardIdentifier="Reviews" title="Reviews" id="EtI-ii-agD" customClass="ReviewTableViewController" customModule="iGDB" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="105" sectionHeaderHeight="28" sectionFooterHeight="28" id="Drx-q3-xum">
+                <tableViewController storyboardIdentifier="Reviews" title="Reviews" clearsSelectionOnViewWillAppear="NO" id="EtI-ii-agD" customClass="ReviewTableViewController" customModule="iGDB" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="120" sectionHeaderHeight="28" sectionFooterHeight="28" id="Drx-q3-xum">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.85925910780000003" green="0.85925910780000003" blue="0.85925910780000003" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="separatorColor" red="0.47893488219895286" green="0.47893488219895286" blue="0.47893488219895286" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="sectionIndexBackgroundColor" red="0.85925910780000003" green="0.85925910780000003" blue="0.85925910780000003" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="rdbID" rowHeight="105" id="tLg-73-yad" customClass="ReviewTableViewCell" customModule="iGDB" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="414" height="105"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="rdbID" rowHeight="120" id="tLg-73-yad" customClass="ReviewTableViewCell" customModule="iGDB" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="414" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tLg-73-yad" id="3jC-aR-0mU">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="104"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N7q-3r-Qz1">
-                                            <rect key="frame" x="18" y="8" width="79" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="lcc-KT-pb1">
-                                            <rect key="frame" x="18" y="29" width="322" height="59"/>
-                                            <string key="text">Duis sed metus erat. Nunc dapibus libero vel ipsum cursus auctor a at orci. Etiam Nunc dapibus libero vel ipsum cursus auctor a at orci. Nunc dapibus libero vel ipsum cursus auctor a at orci. </string>
-                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Wa-jR-6vC">
-                                            <rect key="frame" x="346" y="18" width="68" height="68"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="44"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O9C-wL-NCh">
+                                            <rect key="frame" x="8" y="6" width="398" height="107"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="lcc-KT-pb1">
+                                                    <rect key="frame" x="8" y="38" width="322" height="59"/>
+                                                    <string key="text">Duis sed metus erat. Nunc dapibus libero vel ipsum cursus auctor a at orci. Etiam Nunc dapibus libero vel ipsum cursus auctor a at orci. Nunc dapibus libero vel ipsum cursus auctor a at orci. </string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N7q-3r-Qz1">
+                                                    <rect key="frame" x="8" y="9" width="79" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Wa-jR-6vC">
+                                                    <rect key="frame" x="330" y="19" width="68" height="68"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
                                     </subviews>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="backgroundColor" red="0.85925910780000003" green="0.85925910780000003" blue="0.85925910780000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.85925910780000003" green="0.85925910780000003" blue="0.85925910780000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="comment" destination="lcc-KT-pb1" id="17R-Og-v9D"/>
                                     <outlet property="rating" destination="4Wa-jR-6vC" id="lud-Yj-TfT"/>
