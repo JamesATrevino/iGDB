@@ -8,20 +8,72 @@
 
 import UIKit
 
-class NewsfeedTableViewController: UITableViewController {
+class NewsfeedTableViewController: UITableViewController, NSXMLParserDelegate {
     
     
     @IBOutlet var newsfeed: UITableView!
     
+    var parser = NSXMLParser()
+    var posts = NSMutableArray()
+    var elements = NSMutableDictionary()
+    var element = NSString()
+    var title1 = NSMutableString()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.newsfeed.separatorColor = UIColor.clearColor();
+        beginParsing()
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+    
+    func beginParsing() {
+        posts = []
+        parser = NSXMLParser(contentsOfURL:(NSURL(string:"http://www.polygon.com/rss/group/news/index.xml"))!)!
+        parser.delegate = self
+        parser.parse()
+        self.tableView.reloadData()
+        print("number of posts: \(posts.count)")
+    }
+    
+    func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String])
+    {
+        element = elementName
+        //print(element)
+        if (elementName as NSString).isEqualToString("entry")
+        {
+            elements = NSMutableDictionary()
+            elements = [:]
+            title1 = NSMutableString()
+            title1 = ""
+        }
+    }
+    
+    func parser(parser: NSXMLParser!, foundCharacters string: String!)
+    {
+        if element.isEqualToString("title") {
+            //print(element)
+            title1.appendString(string)
+        }
+        else if element.isEqualToString("") {
+            
+        }
+    }
+    
+    func parser(parser: NSXMLParser!, didEndElement elementName: String!, namespaceURI: String!, qualifiedName qName: String!)
+    {
+        if (elementName as NSString).isEqualToString("item") {
+            if !title1.isEqual(nil) {
+                elements.setObject(title1, forKey: "title")
+            }
+            
+            posts.addObject(elements)
+        }
+        print(posts.count)
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,22 +85,24 @@ class NewsfeedTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return self.posts.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("customCard", forIndexPath: indexPath)
 
         // Configure the cell...
+        (cell as! CardCell).newsTitle.text = posts.objectAtIndex(indexPath.row).valueForKey("title") as? String
+       
+        
 
         return cell
     }
-
 
     /*
     // Override to support conditional editing of the table view.
