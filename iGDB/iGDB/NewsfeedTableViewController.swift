@@ -25,6 +25,7 @@ class NewsfeedTableViewController: UITableViewController, NSXMLParserDelegate {
         super.viewDidLoad()
         self.newsfeed.separatorColor = UIColor.clearColor();
         beginParsing()
+        self.tableView.reloadData()
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -39,7 +40,7 @@ class NewsfeedTableViewController: UITableViewController, NSXMLParserDelegate {
         parser.delegate = self
         parser.parse()
         //self.tableView.reloadData()
-        print("number of posts: \(posts.count)")
+        //print("number of posts: \(posts.count)")
     }
     
     func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String])
@@ -83,7 +84,9 @@ class NewsfeedTableViewController: UITableViewController, NSXMLParserDelegate {
                 //print(parsedString)
             }
             //print("new content: \(parsedString)")
-            newsImage.appendString(string1)
+            if newsImage == "" {
+                newsImage.appendString(string1)
+            }
         }
     }
     
@@ -137,12 +140,12 @@ class NewsfeedTableViewController: UITableViewController, NSXMLParserDelegate {
         (cell as! CardCell).newsText.text = posts.objectAtIndex(indexPath.row).valueForKey("link") as? String
         
         let url = posts.objectAtIndex(indexPath.row).valueForKey("image") as! String
-        //print(url)
         if url != "" {
             let checkedUrl = NSURL(string: url)
             (cell as! CardCell).newsImage.contentMode = .ScaleAspectFit
             downloadImage(checkedUrl!, cell: (cell as! CardCell))
         }
+        //print(url)
         
         return cell
     }
@@ -156,6 +159,7 @@ class NewsfeedTableViewController: UITableViewController, NSXMLParserDelegate {
     func downloadImage(url: NSURL, cell: CardCell){
         print("Download Started")
         print("lastPathComponent: " + (url.lastPathComponent ?? ""))
+        print("new url: \(url)")
         getDataFromUrl(url) { (data, response, error)  in
             dispatch_async(dispatch_get_main_queue()) { () -> Void in
                 guard let data = data where error == nil else { return }
