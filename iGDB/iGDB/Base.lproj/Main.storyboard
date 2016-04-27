@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15A278b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6Lo-br-8JX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6Lo-br-8JX">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -1273,7 +1273,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="sectionIndexBackgroundColor" red="0.85925910780000003" green="0.85925910780000003" blue="0.85925910780000003" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="customCard" rowHeight="200" id="dYj-Wb-tdC" customClass="CardCell" customModule="iGDB" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="news" rowHeight="200" id="dYj-Wb-tdC" customClass="CardCell" customModule="iGDB" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="200"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dYj-Wb-tdC" id="ZYZ-0O-zJR">
@@ -1308,11 +1308,9 @@
                                 <color key="backgroundColor" red="0.85925910780000003" green="0.85925910780000003" blue="0.85925910780000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="cardView" destination="ocn-gc-wao" id="QOG-Xz-lKZ"/>
-                                    <outlet property="image" destination="ahv-mg-fYn" id="VLv-jA-STt"/>
                                     <outlet property="newsImage" destination="ahv-mg-fYn" id="hGW-L2-TSA"/>
                                     <outlet property="newsText" destination="4zY-m0-7aD" id="ZtE-2H-lzJ"/>
                                     <outlet property="newsTitle" destination="D0Y-C9-q3Y" id="tg2-tu-F6y"/>
-                                    <outlet property="text" destination="4zY-m0-7aD" id="BgD-gu-YUp"/>
                                     <segue destination="4h3-2K-i7l" kind="show" id="fPh-3r-eAa"/>
                                 </connections>
                             </tableViewCell>

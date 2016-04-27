@@ -18,6 +18,8 @@ class NewsfeedTableViewController: UITableViewController, NSXMLParserDelegate {
     var elements = NSMutableDictionary()
     var element = NSString()
     var title1 = NSMutableString()
+    var link = NSMutableString()
+    var newsImage = NSMutableString()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +38,7 @@ class NewsfeedTableViewController: UITableViewController, NSXMLParserDelegate {
         parser = NSXMLParser(contentsOfURL:(NSURL(string:"http://www.polygon.com/rss/group/news/index.xml"))!)!
         parser.delegate = self
         parser.parse()
-        self.tableView.reloadData()
+        //self.tableView.reloadData()
         print("number of posts: \(posts.count)")
     }
     
@@ -50,6 +52,10 @@ class NewsfeedTableViewController: UITableViewController, NSXMLParserDelegate {
             elements = [:]
             title1 = NSMutableString()
             title1 = ""
+            link = NSMutableString()
+            link = ""
+            newsImage = NSMutableString()
+            newsImage = ""
         }
     }
     
@@ -59,21 +65,50 @@ class NewsfeedTableViewController: UITableViewController, NSXMLParserDelegate {
             //print(element)
             title1.appendString(string)
         }
-        else if element.isEqualToString("") {
-            
+        else if element.isEqualToString("id") {
+            link.appendString(string)
+        }
+        else if element.isEqualToString("content") {
+            //print(string)
+            var parsedString = []
+            var string1 = ""
+            if string.containsString("src=") {
+                parsedString = string.componentsSeparatedByString("src=")
+            }
+            if parsedString.count > 1 {
+                string1 = parsedString[1] as! String
+                parsedString = string1.componentsSeparatedByString("\"")
+                string1 = parsedString[1] as! String
+                //print(string1)
+                //print(parsedString)
+            }
+            //print("new content: \(parsedString)")
+            newsImage.appendString(string1)
         }
     }
     
     func parser(parser: NSXMLParser!, didEndElement elementName: String!, namespaceURI: String!, qualifiedName qName: String!)
     {
-        if (elementName as NSString).isEqualToString("item") {
+        if (elementName as NSString).isEqualToString("entry") {
             if !title1.isEqual(nil) {
                 elements.setObject(title1, forKey: "title")
             }
-            
+            if !link.isEqual(nil) {
+                elements.setObject(link, forKey: "link")
+            }
+            if !newsImage.isEqual(nil) {
+                elements.setObject(newsImage, forKey: "image")
+                
+            }
             posts.addObject(elements)
         }
-        print(posts.count)
+        //print(posts.count)
+    }
+    
+    func parserDidEndDocument(parser: NSXMLParser){
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            self.tableView.reloadData()
+        })
     }
 
     override func didReceiveMemoryWarning() {
@@ -94,16 +129,43 @@ class NewsfeedTableViewController: UITableViewController, NSXMLParserDelegate {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("customCard", forIndexPath: indexPath)
-
+        //print("before getting cell")
+        let cell = tableView.dequeueReusableCellWithIdentifier("news", forIndexPath: indexPath)
+        //print("creating cells")
         // Configure the cell...
         (cell as! CardCell).newsTitle.text = posts.objectAtIndex(indexPath.row).valueForKey("title") as? String
-       
+        (cell as! CardCell).newsText.text = posts.objectAtIndex(indexPath.row).valueForKey("link") as? String
         
-
+        let url = posts.objectAtIndex(indexPath.row).valueForKey("image") as! String
+        //print(url)
+        if url != "" {
+            let checkedUrl = NSURL(string: url)
+            (cell as! CardCell).newsImage.contentMode = .ScaleAspectFit
+            downloadImage(checkedUrl!, cell: (cell as! CardCell))
+        }
+        
         return cell
     }
 
+    func getDataFromUrl(url:NSURL, completion: ((data: NSData?, response: NSURLResponse?, error: NSError? ) -> Void)) {
+        NSURLSession.sharedSession().dataTaskWithURL(url) { (data, response, error) in
+            completion(data: data, response: response, error: error)
+            }.resume()
+    }
+    
+    func downloadImage(url: NSURL, cell: CardCell){
+        print("Download Started")
+        print("lastPathComponent: " + (url.lastPathComponent ?? ""))
+        getDataFromUrl(url) { (data, response, error)  in
+            dispatch_async(dispatch_get_main_queue()) { () -> Void in
+                guard let data = data where error == nil else { return }
+                print(response?.suggestedFilename ?? "")
+                print("Download Finished")
+                cell.newsImage.image = UIImage(data: data)
+            }
+        }
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
