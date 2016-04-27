@@ -923,10 +923,10 @@
             </objects>
             <point key="canvasLocation" x="785" y="180"/>
         </scene>
-        <!--Account Details View Controller-->
+        <!--Account Details-->
         <scene sceneID="FXz-Ne-jTg">
             <objects>
-                <viewController id="MSd-HZ-q3B" customClass="AccountDetailsViewController" customModule="iGDB" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Account Details" id="MSd-HZ-q3B" customClass="AccountDetailsViewController" customModule="iGDB" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EzX-TG-QOY"/>
                         <viewControllerLayoutGuide type="bottom" id="ayP-i2-40L"/>
