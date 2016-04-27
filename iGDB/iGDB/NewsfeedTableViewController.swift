@@ -166,6 +166,18 @@ class NewsfeedTableViewController: UITableViewController, NSXMLParserDelegate {
         }
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let selectedItem = posts.objectAtIndex(indexPath.row)
+        let url = selectedItem.valueForKey("link") as! String
+        if url != "" {
+            let parseURL = url.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+            let checkedURL = NSURL(string: parseURL)
+            print("opening URL \(parseURL)")
+            UIApplication.sharedApplication().openURL(checkedURL!)
+        }
+        
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

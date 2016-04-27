@@ -1311,7 +1311,6 @@
                                     <outlet property="newsImage" destination="ahv-mg-fYn" id="hGW-L2-TSA"/>
                                     <outlet property="newsText" destination="4zY-m0-7aD" id="ZtE-2H-lzJ"/>
                                     <outlet property="newsTitle" destination="D0Y-C9-q3Y" id="tg2-tu-F6y"/>
-                                    <segue destination="4h3-2K-i7l" kind="show" id="fPh-3r-eAa"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -1339,10 +1338,10 @@
                         <viewControllerLayoutGuide type="bottom" id="b4y-NG-Ggw"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="jLK-h0-ihj">
-                        <rect key="frame" x="0.0" y="64" width="414" height="623"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BwG-jD-qSU">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BwG-jD-qSU">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="623"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By Author Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cjR-e6-LjS">
