@@ -31,7 +31,6 @@ class DatabaseTableViewController: UITableViewController {
         searchController.dimsBackgroundDuringPresentation = false
         searchController.hidesNavigationBarDuringPresentation = false
         searchController.searchBar.translucent = false
-        //searchController.searchBar.barStyle
         
         definesPresentationContext = true
         tableView.tableHeaderView = searchController.searchBar
