@@ -18,19 +18,20 @@ extension DatabaseTableViewController: UISearchResultsUpdating {
 class DatabaseTableViewController: UITableViewController {
     
     @IBOutlet var searchBar: UISearchBar!
+    
     let searchController = UISearchController(searchResultsController: nil)
     var filteredGames = [PFObject]()
     //let barStyle: UIBarStyle = 2;
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.navigationController?.setNavigationBarHidden(false, animated: false)
         
         searchController.searchResultsUpdater = self
         searchController.dimsBackgroundDuringPresentation = false
         searchController.hidesNavigationBarDuringPresentation = false
         searchController.searchBar.translucent = false
+        searchController.searchBar.barStyle = UIBarStyle.Black
         
         definesPresentationContext = true
         tableView.tableHeaderView = searchController.searchBar

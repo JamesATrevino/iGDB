@@ -60,7 +60,7 @@ class NewsfeedTableViewController: UITableViewController, NSXMLParserDelegate {
         }
     }
     
-    func parser(parser: NSXMLParser!, foundCharacters string: String!)
+    func parser(parser: NSXMLParser, foundCharacters string: String)
     {
         if element.isEqualToString("title") {
             //print(element)
@@ -90,7 +90,7 @@ class NewsfeedTableViewController: UITableViewController, NSXMLParserDelegate {
         }
     }
     
-    func parser(parser: NSXMLParser!, didEndElement elementName: String!, namespaceURI: String!, qualifiedName qName: String!)
+    func parser(parser: NSXMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?)
     {
         if (elementName as NSString).isEqualToString("entry") {
             if !title1.isEqual(nil) {
@@ -157,14 +157,14 @@ class NewsfeedTableViewController: UITableViewController, NSXMLParserDelegate {
     }
     
     func downloadImage(url: NSURL, cell: CardCell){
-        print("Download Started")
-        print("lastPathComponent: " + (url.lastPathComponent ?? ""))
-        print("new url: \(url)")
+        //print("Download Started")
+        //print("lastPathComponent: " + (url.lastPathComponent ?? ""))
+        //print("new url: \(url)")
         getDataFromUrl(url) { (data, response, error)  in
             dispatch_async(dispatch_get_main_queue()) { () -> Void in
                 guard let data = data where error == nil else { return }
-                print(response?.suggestedFilename ?? "")
-                print("Download Finished")
+                //print(response?.suggestedFilename ?? "")
+                //print("Download Finished")
                 cell.newsImage.image = UIImage(data: data)
             }
         }
@@ -176,7 +176,7 @@ class NewsfeedTableViewController: UITableViewController, NSXMLParserDelegate {
         if url != "" {
             let parseURL = url.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
             let checkedURL = NSURL(string: parseURL)
-            print("opening URL \(parseURL)")
+            //print("opening URL \(parseURL)")
             UIApplication.sharedApplication().openURL(checkedURL!)
         }
         
