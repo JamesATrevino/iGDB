@@ -137,7 +137,7 @@ class NewsfeedTableViewController: UITableViewController, NSXMLParserDelegate {
         //print("creating cells")
         // Configure the cell...
         (cell as! CardCell).newsTitle.text = posts.objectAtIndex(indexPath.row).valueForKey("title") as? String
-        (cell as! CardCell).newsText.text = posts.objectAtIndex(indexPath.row).valueForKey("link") as? String
+        //(cell as! CardCell).newsText.text = posts.objectAtIndex(indexPath.row).valueForKey("link") as? String
         
         let url = posts.objectAtIndex(indexPath.row).valueForKey("image") as! String
         if url != "" {
