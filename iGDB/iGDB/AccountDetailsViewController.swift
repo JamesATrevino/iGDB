@@ -29,6 +29,7 @@ class AccountDetailsViewController: UIViewController {
         }
         else {
             email.text = currentEmail
+            //print(currentEmail)
         }
     }
 

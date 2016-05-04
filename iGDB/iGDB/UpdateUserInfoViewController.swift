@@ -16,13 +16,22 @@ class UpdateUserInfoViewController: UIViewController {
     
     @IBAction func update(sender: AnyObject) {
         let currentUser = PFUser.currentUser()
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         let newEmail = email.text!
-        currentUser?.email = newEmail
-        currentUser?.saveInBackground()
-        let alert = UIAlertController(title: "Success!", message:"Your email has been updated!", preferredStyle: .Alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .Default) { _ in
-            self.accountDetailsView!.email.text = newEmail})
-        self.presentViewController(alert, animated: true){}
+        if emailTest.evaluateWithObject(newEmail){
+            currentUser?.email = newEmail
+            currentUser?.saveInBackground()
+            let alert = UIAlertController(title: "Success!", message:"Your email has been updated!", preferredStyle: .Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .Default) { _ in
+                self.accountDetailsView!.email.text = newEmail})
+            self.presentViewController(alert, animated: true){}
+        }
+        else {
+            let alert = UIAlertController(title: "Failed!", message:"Please enter a valid Email Address", preferredStyle: .Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .Default) { _ in })
+            self.presentViewController(alert, animated: true){}
+        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
