@@ -61,12 +61,14 @@ class CommentsDetailViewController: UIViewController, UITableViewDelegate, UITab
     
     
     
+    @IBAction func addAComment(sender: AnyObject) {
+    }
+   
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
 
     }
     
-    @IBAction func addComment(sender: AnyObject) {
-    }
+ 
     /*
     // MARK: - Navigation
 
@@ -83,7 +85,6 @@ extension String{
     func heightWithConstrainedWidth(width: CGFloat, font: UIFont) -> CGFloat{
         let constraintRect = CGSize(width: width, height: CGFloat.max)
         let boundingBox = self.boundingRectWithSize(constraintRect, options: NSStringDrawingOptions.UsesLineFragmentOrigin, attributes: [NSFontAttributeName: font], context: nil)
-        print(ceil(boundingBox.height))
         return ceil(boundingBox.height)
     }
 }
