@@ -16,10 +16,10 @@ class ReviewViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var submitReview: UIButton!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var gameLabel: UILabel!
-    @IBOutlet weak var mywidth: NSLayoutConstraint!
-    @IBOutlet weak var scrollView: UIScrollView!
+    //@IBOutlet weak var mywidth: NSLayoutConstraint!
+    //@IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var userScore: UILabel!
-    @IBOutlet weak var stepper: UIStepper!
+    //@IBOutlet weak var stepper: UIStepper!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var star1: UIButton!
     @IBOutlet weak var star2: UIButton!
@@ -30,7 +30,7 @@ class ReviewViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.scrollView.directionalLockEnabled = true
+        //self.scrollView.directionalLockEnabled = true
         
         self.title = "Write A Review" // as? String
         gameLabel.text = game!["name"] as? String
@@ -41,7 +41,7 @@ class ReviewViewController: UIViewController, UITextFieldDelegate {
         let date2 = dateFormatter.stringFromDate((convertedDate)!)
         
         self.commentField.delegate = self
-        self.mywidth.constant = self.view.bounds.size.width
+        //self.mywidth.constant = self.view.bounds.size.width
         self.dateLabel.text = date2 //as? String
         
         let url = game!["image"] as? String
@@ -109,39 +109,86 @@ class ReviewViewController: UIViewController, UITextFieldDelegate {
     }
     
     
-    @IBAction func stepperAction(sender: AnyObject) {
-        userScore.text = "\(Int(stepper.value))"
-        
-        if(Int(stepper.value) >= 1) {
-            star1.setImage(UIImage(named: "filledStar.png"), forState: .Normal)
-        } else {
-            star1.setImage(UIImage(named: "emptyStar.png"), forState: .Normal)
-        }
-        
-        if(Int(stepper.value) >= 2) {
-            star2.setImage(UIImage(named: "filledStar.png"), forState: .Normal)
-        } else {
-            star2.setImage(UIImage(named: "emptyStar.png"), forState: .Normal)
-        }
-        
-        if(Int(stepper.value) >= 3) {
-            star3.setImage(UIImage(named: "filledStar.png"), forState: .Normal)
-        } else {
-            star3.setImage(UIImage(named: "emptyStar.png"), forState: .Normal)
-        }
-        
-        if(Int(stepper.value) >= 4) {
-            star4.setImage(UIImage(named: "filledStar.png"), forState: .Normal)
-        } else {
-            star4.setImage(UIImage(named: "emptyStar.png"), forState: .Normal)
-        }
-        
-        if(Int(stepper.value) >= 5) {
-            star5.setImage(UIImage(named: "filledStar.png"), forState: .Normal)
-        } else {
-            star5.setImage(UIImage(named: "emptyStar.png"), forState: .Normal)
-        }
+//    @IBAction func stepperAction(sender: AnyObject) {
+//        userScore.text = "\(Int(stepper.value))"
+//        
+//        if(Int(stepper.value) >= 1) {
+//            star1.setImage(UIImage(named: "filledStar.png"), forState: .Normal)
+//        } else {
+//            star1.setImage(UIImage(named: "emptyStar.png"), forState: .Normal)
+//        }
+//        
+//        if(Int(stepper.value) >= 2) {
+//            star2.setImage(UIImage(named: "filledStar.png"), forState: .Normal)
+//        } else {
+//            star2.setImage(UIImage(named: "emptyStar.png"), forState: .Normal)
+//        }
+//        
+//        if(Int(stepper.value) >= 3) {
+//            star3.setImage(UIImage(named: "filledStar.png"), forState: .Normal)
+//        } else {
+//            star3.setImage(UIImage(named: "emptyStar.png"), forState: .Normal)
+//        }
+//        
+//        if(Int(stepper.value) >= 4) {
+//            star4.setImage(UIImage(named: "filledStar.png"), forState: .Normal)
+//        } else {
+//            star4.setImage(UIImage(named: "emptyStar.png"), forState: .Normal)
+//        }
+//        
+//        if(Int(stepper.value) >= 5) {
+//            star5.setImage(UIImage(named: "filledStar.png"), forState: .Normal)
+//        } else {
+//            star5.setImage(UIImage(named: "emptyStar.png"), forState: .Normal)
+//        }
+//    }
+    
+    @IBAction func firstStar(sender: AnyObject) {
+        userScore.text = "\(Int(1))"
+        star1.setImage(UIImage(named: "filledStar.png"), forState: .Normal)
+        star2.setImage(UIImage(named: "emptyStar.png"), forState: .Normal)
+        star3.setImage(UIImage(named: "emptyStar.png"), forState: .Normal)
+        star4.setImage(UIImage(named: "emptyStar.png"), forState: .Normal)
+        star5.setImage(UIImage(named: "emptyStar.png"), forState: .Normal)
     }
+    
+    @IBAction func secondStar(sender: AnyObject) {
+        userScore.text = "\(Int(2))"
+        star1.setImage(UIImage(named: "filledStar.png"), forState: .Normal)
+        star2.setImage(UIImage(named: "filledStar.png"), forState: .Normal)
+        star3.setImage(UIImage(named: "emptyStar.png"), forState: .Normal)
+        star4.setImage(UIImage(named: "emptyStar.png"), forState: .Normal)
+        star5.setImage(UIImage(named: "emptyStar.png"), forState: .Normal)
+    }
+    
+    @IBAction func thirdStar(sender: AnyObject) {
+        userScore.text = "\(Int(3))"
+        star1.setImage(UIImage(named: "filledStar.png"), forState: .Normal)
+        star2.setImage(UIImage(named: "filledStar.png"), forState: .Normal)
+        star3.setImage(UIImage(named: "filledStar.png"), forState: .Normal)
+        star4.setImage(UIImage(named: "emptyStar.png"), forState: .Normal)
+        star5.setImage(UIImage(named: "emptyStar.png"), forState: .Normal)
+    }
+    
+    @IBAction func fourthStar(sender: AnyObject) {
+        userScore.text = "\(Int(4))"
+        star1.setImage(UIImage(named: "filledStar.png"), forState: .Normal)
+        star2.setImage(UIImage(named: "filledStar.png"), forState: .Normal)
+        star3.setImage(UIImage(named: "filledStar.png"), forState: .Normal)
+        star4.setImage(UIImage(named: "filledStar.png"), forState: .Normal)
+        star5.setImage(UIImage(named: "emptyStar.png"), forState: .Normal)
+    }
+    
+    @IBAction func fifthStar(sender: AnyObject) {
+        userScore.text = "\(Int(5))"
+        star1.setImage(UIImage(named: "filledStar.png"), forState: .Normal)
+        star2.setImage(UIImage(named: "filledStar.png"), forState: .Normal)
+        star3.setImage(UIImage(named: "filledStar.png"), forState: .Normal)
+        star4.setImage(UIImage(named: "filledStar.png"), forState: .Normal)
+        star5.setImage(UIImage(named: "filledStar.png"), forState: .Normal)
+    }
+    
+    
 
     @IBAction func submitPressed(sender: AnyObject){
         

@@ -149,13 +149,13 @@
 				845580EC1CB5CFA800AD3360 /* ReviewTableViewCell.swift */,
 				FCBD8BE81CA22939000215A5 /* DatabaseTableViewController.swift */,
 				7FDCC6771CB4C70300A9806E /* DiscussViewController.swift */,
+				7FDCC6791CB557B100A9806E /* CommentsDetailViewController.swift */,
 				7DF48F801CA0CB7C002F8FD4 /* Parse.framework */,
 				7DF48F7E1CA0CB73002F8FD4 /* Bolts.framework */,
 				7F568C671CA04B4B001E837D /* Assets.xcassets */,
 				7F568C6C1CA04B4B001E837D /* Info.plist */,
 				7F568C641CA04B4B001E837D /* iGDB.xcdatamodeld */,
 				7F568C611CA04B4B001E837D /* Main.storyboard */,
-				7FDCC6791CB557B100A9806E /* CommentsDetailViewController.swift */,
 			);
 			path = iGDB;
 			sourceTree = "<group>";
