@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7D7D45151CA34E52000F8F6A /* AccountDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7D45141CA34E52000F8F6A /* AccountDetailsViewController.swift */; };
+		7DD129B81CDAA910003C72E9 /* UpdateUserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD129B71CDAA910003C72E9 /* UpdateUserInfoViewController.swift */; };
 		7DF48F7F1CA0CB73002F8FD4 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DF48F7E1CA0CB73002F8FD4 /* Bolts.framework */; };
 		7DF48F811CA0CB7C002F8FD4 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DF48F801CA0CB7C002F8FD4 /* Parse.framework */; };
 		7DF48F831CA0CBA9002F8FD4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DF48F821CA0CBA9002F8FD4 /* AudioToolbox.framework */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		7D7D45141CA34E52000F8F6A /* AccountDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountDetailsViewController.swift; sourceTree = "<group>"; };
+		7DD129B71CDAA910003C72E9 /* UpdateUserInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateUserInfoViewController.swift; sourceTree = "<group>"; };
 		7DF48F7E1CA0CB73002F8FD4 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		7DF48F801CA0CB7C002F8FD4 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		7DF48F821CA0CBA9002F8FD4 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -136,6 +138,7 @@
 				7F6FA9441CA1B01100F37D52 /* LogInRegistrationViewController.swift */,
 				7F6FA94A1CA2152600F37D52 /* RegistrationViewController.swift */,
 				FC19D95C1CCE4D1F00376BBE /* CardCell.swift */,
+				7DD129B71CDAA910003C72E9 /* UpdateUserInfoViewController.swift */,
 				FC19D95E1CCE4D5A00376BBE /* NewsfeedTableViewController.swift */,
 				7D7D45141CA34E52000F8F6A /* AccountDetailsViewController.swift */,
 				7F6FA9481CA212FB00F37D52 /* MyTabBarController.swift */,
@@ -240,6 +243,7 @@
 				7F6FA94B1CA2152600F37D52 /* RegistrationViewController.swift in Sources */,
 				7FDCC6781CB4C70300A9806E /* DiscussViewController.swift in Sources */,
 				7F568C5E1CA04B4B001E837D /* AppDelegate.swift in Sources */,
+				7DD129B81CDAA910003C72E9 /* UpdateUserInfoViewController.swift in Sources */,
 				845580ED1CB5CFA900AD3360 /* ReviewTableViewCell.swift in Sources */,
 				7F568C661CA04B4B001E837D /* iGDB.xcdatamodeld in Sources */,
 				7FDCC67A1CB557B100A9806E /* CommentsDetailViewController.swift in Sources */,

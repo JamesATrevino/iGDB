@@ -20,9 +20,16 @@ class AccountDetailsViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        let currentUser = PFUser.currentUser()!.username
-        username.text = currentUser
+        let currentUser = PFUser.currentUser()
+        let name = currentUser?.username
+        username.text = name
+        let currentEmail = currentUser?.email
+        if currentEmail == nil {
         email.text = "You haven't added an email address." //PFUser.currentUser()!.email
+        }
+        else {
+            email.text = currentEmail
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,18 +38,23 @@ class AccountDetailsViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
-        gameReview.removeAll()
+        if segue.identifier == "myReviews" {
+            gameReview.removeAll()
             
-        for games in reviewsList {
-            if games["userID"] as? String == (PFUser.currentUser())!.objectId
-            {
-                self.gameReview.append(games)
+            for games in reviewsList {
+                if games["userID"] as? String == (PFUser.currentUser())!.objectId
+                {
+                    self.gameReview.append(games)
+                }
             }
-        }
             
-        let userReviews:MyReviewsController = (segue.destinationViewController as? MyReviewsController)!
-        userReviews.gameReview = self.gameReview
+            let userReviews:MyReviewsController = (segue.destinationViewController as? MyReviewsController)!
+            userReviews.gameReview = self.gameReview
+        }
+        if segue.identifier == "update" {
+            let updateViewVC:UpdateUserInfoViewController = (segue.destinationViewController as? UpdateUserInfoViewController)!
+            updateViewVC.accountDetailsView = self
+        }
     }
 
 }
