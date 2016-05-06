@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6Lo-br-8JX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15A278b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6Lo-br-8JX">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -533,7 +533,7 @@
                                             <constraint firstAttribute="width" constant="46" id="T0J-cx-L2J"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="UC5-kP-mzr"/>
                                         </constraints>
-                                        <state key="normal" title="Button" image="emptyStar"/>
+                                        <state key="normal" title="Button" image="emptyStar" backgroundImage="emptyStar"/>
                                         <connections>
                                             <action selector="firstStar:" destination="zg7-2h-FZd" eventType="touchUpInside" id="IOe-kN-2tF"/>
                                         </connections>
@@ -545,7 +545,7 @@
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="fAG-Ia-AQH"/>
                                             <constraint firstAttribute="width" constant="46" id="n0s-Ch-sy0"/>
                                         </constraints>
-                                        <state key="normal" title="Button" image="emptyStar"/>
+                                        <state key="normal" title="Button" image="emptyStar" backgroundImage="emptyStar"/>
                                         <connections>
                                             <action selector="secondStar:" destination="zg7-2h-FZd" eventType="touchUpInside" id="v1s-24-7hU"/>
                                         </connections>
@@ -557,7 +557,7 @@
                                             <constraint firstAttribute="height" constant="41" id="Sco-QZ-YFZ"/>
                                             <constraint firstAttribute="width" constant="46" id="ovn-n6-QA1"/>
                                         </constraints>
-                                        <state key="normal" title="Button" image="emptyStar"/>
+                                        <state key="normal" title="Button" image="emptyStar" backgroundImage="emptyStar"/>
                                         <connections>
                                             <action selector="thirdStar:" destination="zg7-2h-FZd" eventType="touchUpInside" id="pn5-0i-TeB"/>
                                         </connections>
@@ -569,7 +569,7 @@
                                             <constraint firstAttribute="width" constant="46" id="vga-T3-mFg"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="zjb-8H-cUb"/>
                                         </constraints>
-                                        <state key="normal" title="Button" image="emptyStar"/>
+                                        <state key="normal" title="Button" image="emptyStar" backgroundImage="emptyStar"/>
                                         <connections>
                                             <action selector="fourthStar:" destination="zg7-2h-FZd" eventType="touchUpInside" id="vPW-wK-OQa"/>
                                         </connections>
@@ -580,7 +580,7 @@
                                             <constraint firstAttribute="height" constant="41" id="DUy-oc-lBi"/>
                                             <constraint firstAttribute="width" constant="46" id="fHi-5t-OwA"/>
                                         </constraints>
-                                        <state key="normal" title="Button" image="emptyStar"/>
+                                        <state key="normal" title="Button" image="emptyStar" backgroundImage="emptyStar"/>
                                         <connections>
                                             <action selector="fifthStar:" destination="zg7-2h-FZd" eventType="touchUpInside" id="cw4-Cg-3mv"/>
                                         </connections>
