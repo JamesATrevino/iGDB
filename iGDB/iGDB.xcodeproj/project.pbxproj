@@ -7,21 +7,79 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D7D45151CA34E52000F8F6A /* AccountDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7D45141CA34E52000F8F6A /* AccountDetailsViewController.swift */; };
+		7DD129B81CDAA910003C72E9 /* UpdateUserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD129B71CDAA910003C72E9 /* UpdateUserInfoViewController.swift */; };
+		7DF48F7F1CA0CB73002F8FD4 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DF48F7E1CA0CB73002F8FD4 /* Bolts.framework */; };
+		7DF48F811CA0CB7C002F8FD4 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DF48F801CA0CB7C002F8FD4 /* Parse.framework */; };
+		7DF48F831CA0CBA9002F8FD4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DF48F821CA0CBA9002F8FD4 /* AudioToolbox.framework */; };
+		7DF48F851CA0CBB4002F8FD4 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DF48F841CA0CBB4002F8FD4 /* CFNetwork.framework */; };
+		7DF48F871CA0CBBD002F8FD4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DF48F861CA0CBBD002F8FD4 /* CoreGraphics.framework */; };
+		7DF48F891CA0CBC5002F8FD4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DF48F881CA0CBC5002F8FD4 /* CoreLocation.framework */; };
+		7DF48F8B1CA0CBCE002F8FD4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DF48F8A1CA0CBCE002F8FD4 /* QuartzCore.framework */; };
+		7DF48F8D1CA0CBDA002F8FD4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DF48F8C1CA0CBDA002F8FD4 /* Security.framework */; };
+		7DF48F8F1CA0CBE5002F8FD4 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DF48F8E1CA0CBE5002F8FD4 /* StoreKit.framework */; };
+		7DF48F911CA0CBEF002F8FD4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DF48F901CA0CBEF002F8FD4 /* SystemConfiguration.framework */; };
+		7DF48F931CA0CBFA002F8FD4 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DF48F921CA0CBFA002F8FD4 /* libz.tbd */; };
+		7DF48F951CA0CC05002F8FD4 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DF48F941CA0CC05002F8FD4 /* libsqlite3.tbd */; };
 		7F568C5E1CA04B4B001E837D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F568C5D1CA04B4B001E837D /* AppDelegate.swift */; };
-		7F568C601CA04B4B001E837D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F568C5F1CA04B4B001E837D /* ViewController.swift */; };
 		7F568C631CA04B4B001E837D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F568C611CA04B4B001E837D /* Main.storyboard */; };
 		7F568C661CA04B4B001E837D /* iGDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7F568C641CA04B4B001E837D /* iGDB.xcdatamodeld */; };
 		7F568C681CA04B4B001E837D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F568C671CA04B4B001E837D /* Assets.xcassets */; };
+		7F6FA9451CA1B01100F37D52 /* LogInRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6FA9441CA1B01100F37D52 /* LogInRegistrationViewController.swift */; };
+		7F6FA9491CA212FB00F37D52 /* MyTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6FA9481CA212FB00F37D52 /* MyTabBarController.swift */; };
+		7F6FA94B1CA2152600F37D52 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6FA94A1CA2152600F37D52 /* RegistrationViewController.swift */; };
+		7F6FA94D1CA2244100F37D52 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6FA94C1CA2244000F37D52 /* SettingsTableViewController.swift */; };
+		7F6FA94F1CA301D700F37D52 /* GameDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6FA94E1CA301D700F37D52 /* GameDetailViewController.swift */; };
+		7FDCC6781CB4C70300A9806E /* DiscussViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDCC6771CB4C70300A9806E /* DiscussViewController.swift */; };
+		7FDCC67A1CB557B100A9806E /* CommentsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDCC6791CB557B100A9806E /* CommentsDetailViewController.swift */; };
+		845580ED1CB5CFA900AD3360 /* ReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845580EC1CB5CFA800AD3360 /* ReviewTableViewCell.swift */; };
+		FC19D95D1CCE4D1F00376BBE /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC19D95C1CCE4D1F00376BBE /* CardCell.swift */; };
+		FC19D95F1CCE4D5A00376BBE /* NewsfeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC19D95E1CCE4D5A00376BBE /* NewsfeedTableViewController.swift */; };
+		FC91CABC1CB332870016BBF9 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC91CABB1CB332870016BBF9 /* RatingControl.swift */; };
+		FC9E5CD21CB8A55F00981D88 /* MyReviewsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9E5CD11CB8A55F00981D88 /* MyReviewsController.swift */; };
+		FC9E5CD41CB8A66F00981D88 /* MyReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9E5CD31CB8A66F00981D88 /* MyReviewCell.swift */; };
+		FCBD8BE91CA22939000215A5 /* DatabaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBD8BE81CA22939000215A5 /* DatabaseTableViewController.swift */; };
+		FCD5131B1CB5943100A13A10 /* ReviewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD5131A1CB5943100A13A10 /* ReviewTableViewController.swift */; };
+		FCF0B5E41CB3276900DA192E /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF0B5E31CB3276900DA192E /* ReviewViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7D7D45141CA34E52000F8F6A /* AccountDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountDetailsViewController.swift; sourceTree = "<group>"; };
+		7DD129B71CDAA910003C72E9 /* UpdateUserInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateUserInfoViewController.swift; sourceTree = "<group>"; };
+		7DF48F7E1CA0CB73002F8FD4 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		7DF48F801CA0CB7C002F8FD4 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		7DF48F821CA0CBA9002F8FD4 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		7DF48F841CA0CBB4002F8FD4 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		7DF48F861CA0CBBD002F8FD4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7DF48F881CA0CBC5002F8FD4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		7DF48F8A1CA0CBCE002F8FD4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		7DF48F8C1CA0CBDA002F8FD4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		7DF48F8E1CA0CBE5002F8FD4 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		7DF48F901CA0CBEF002F8FD4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		7DF48F921CA0CBFA002F8FD4 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		7DF48F941CA0CC05002F8FD4 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		7F568C5A1CA04B4B001E837D /* iGDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iGDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F568C5D1CA04B4B001E837D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7F568C5F1CA04B4B001E837D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7F568C621CA04B4B001E837D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7F568C651CA04B4B001E837D /* iGDB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iGDB.xcdatamodel; sourceTree = "<group>"; };
 		7F568C671CA04B4B001E837D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F568C6C1CA04B4B001E837D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F6FA9441CA1B01100F37D52 /* LogInRegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInRegistrationViewController.swift; sourceTree = "<group>"; };
+		7F6FA9481CA212FB00F37D52 /* MyTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTabBarController.swift; sourceTree = "<group>"; };
+		7F6FA94A1CA2152600F37D52 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		7F6FA94C1CA2244000F37D52 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		7F6FA94E1CA301D700F37D52 /* GameDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameDetailViewController.swift; sourceTree = "<group>"; };
+		7FDCC6771CB4C70300A9806E /* DiscussViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscussViewController.swift; sourceTree = "<group>"; };
+		7FDCC6791CB557B100A9806E /* CommentsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsDetailViewController.swift; sourceTree = "<group>"; };
+		845580EC1CB5CFA800AD3360 /* ReviewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewTableViewCell.swift; sourceTree = "<group>"; };
+		FC19D95C1CCE4D1F00376BBE /* CardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
+		FC19D95E1CCE4D5A00376BBE /* NewsfeedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsfeedTableViewController.swift; sourceTree = "<group>"; };
+		FC91CABB1CB332870016BBF9 /* RatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
+		FC9E5CD11CB8A55F00981D88 /* MyReviewsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyReviewsController.swift; sourceTree = "<group>"; };
+		FC9E5CD31CB8A66F00981D88 /* MyReviewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyReviewCell.swift; sourceTree = "<group>"; };
+		FCBD8BE81CA22939000215A5 /* DatabaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseTableViewController.swift; sourceTree = "<group>"; };
+		FCD5131A1CB5943100A13A10 /* ReviewTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewTableViewController.swift; sourceTree = "<group>"; };
+		FCF0B5E31CB3276900DA192E /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +87,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DF48F951CA0CC05002F8FD4 /* libsqlite3.tbd in Frameworks */,
+				7DF48F931CA0CBFA002F8FD4 /* libz.tbd in Frameworks */,
+				7DF48F911CA0CBEF002F8FD4 /* SystemConfiguration.framework in Frameworks */,
+				7DF48F8F1CA0CBE5002F8FD4 /* StoreKit.framework in Frameworks */,
+				7DF48F8D1CA0CBDA002F8FD4 /* Security.framework in Frameworks */,
+				7DF48F8B1CA0CBCE002F8FD4 /* QuartzCore.framework in Frameworks */,
+				7DF48F891CA0CBC5002F8FD4 /* CoreLocation.framework in Frameworks */,
+				7DF48F871CA0CBBD002F8FD4 /* CoreGraphics.framework in Frameworks */,
+				7DF48F851CA0CBB4002F8FD4 /* CFNetwork.framework in Frameworks */,
+				7DF48F831CA0CBA9002F8FD4 /* AudioToolbox.framework in Frameworks */,
+				7DF48F811CA0CB7C002F8FD4 /* Parse.framework in Frameworks */,
+				7DF48F7F1CA0CB73002F8FD4 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,8 +108,18 @@
 		7F568C511CA04B4B001E837D = {
 			isa = PBXGroup;
 			children = (
+				7DF48F941CA0CC05002F8FD4 /* libsqlite3.tbd */,
+				7DF48F921CA0CBFA002F8FD4 /* libz.tbd */,
 				7F568C5C1CA04B4B001E837D /* iGDB */,
 				7F568C5B1CA04B4B001E837D /* Products */,
+				7DF48F901CA0CBEF002F8FD4 /* SystemConfiguration.framework */,
+				7DF48F8E1CA0CBE5002F8FD4 /* StoreKit.framework */,
+				7DF48F8C1CA0CBDA002F8FD4 /* Security.framework */,
+				7DF48F8A1CA0CBCE002F8FD4 /* QuartzCore.framework */,
+				7DF48F881CA0CBC5002F8FD4 /* CoreLocation.framework */,
+				7DF48F861CA0CBBD002F8FD4 /* CoreGraphics.framework */,
+				7DF48F841CA0CBB4002F8FD4 /* CFNetwork.framework */,
+				7DF48F821CA0CBA9002F8FD4 /* AudioToolbox.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,11 +135,30 @@
 			isa = PBXGroup;
 			children = (
 				7F568C5D1CA04B4B001E837D /* AppDelegate.swift */,
-				7F568C5F1CA04B4B001E837D /* ViewController.swift */,
-				7F568C611CA04B4B001E837D /* Main.storyboard */,
+				7F6FA9441CA1B01100F37D52 /* LogInRegistrationViewController.swift */,
+				7F6FA94A1CA2152600F37D52 /* RegistrationViewController.swift */,
+				FC19D95C1CCE4D1F00376BBE /* CardCell.swift */,
+				7DD129B71CDAA910003C72E9 /* UpdateUserInfoViewController.swift */,
+				FC19D95E1CCE4D5A00376BBE /* NewsfeedTableViewController.swift */,
+				7D7D45141CA34E52000F8F6A /* AccountDetailsViewController.swift */,
+				7F6FA9481CA212FB00F37D52 /* MyTabBarController.swift */,
+				7F6FA94C1CA2244000F37D52 /* SettingsTableViewController.swift */,
+				7F6FA94E1CA301D700F37D52 /* GameDetailViewController.swift */,
+				FCF0B5E31CB3276900DA192E /* ReviewViewController.swift */,
+				FC91CABB1CB332870016BBF9 /* RatingControl.swift */,
+				FC9E5CD11CB8A55F00981D88 /* MyReviewsController.swift */,
+				FC9E5CD31CB8A66F00981D88 /* MyReviewCell.swift */,
+				FCD5131A1CB5943100A13A10 /* ReviewTableViewController.swift */,
+				845580EC1CB5CFA800AD3360 /* ReviewTableViewCell.swift */,
+				FCBD8BE81CA22939000215A5 /* DatabaseTableViewController.swift */,
+				7FDCC6771CB4C70300A9806E /* DiscussViewController.swift */,
+				7FDCC6791CB557B100A9806E /* CommentsDetailViewController.swift */,
+				7DF48F801CA0CB7C002F8FD4 /* Parse.framework */,
+				7DF48F7E1CA0CB73002F8FD4 /* Bolts.framework */,
 				7F568C671CA04B4B001E837D /* Assets.xcassets */,
 				7F568C6C1CA04B4B001E837D /* Info.plist */,
 				7F568C641CA04B4B001E837D /* iGDB.xcdatamodeld */,
+				7F568C611CA04B4B001E837D /* Main.storyboard */,
 			);
 			path = iGDB;
 			sourceTree = "<group>";
@@ -134,9 +233,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F568C601CA04B4B001E837D /* ViewController.swift in Sources */,
+				FCBD8BE91CA22939000215A5 /* DatabaseTableViewController.swift in Sources */,
+				7F6FA94F1CA301D700F37D52 /* GameDetailViewController.swift in Sources */,
+				FCF0B5E41CB3276900DA192E /* ReviewViewController.swift in Sources */,
+				FC9E5CD21CB8A55F00981D88 /* MyReviewsController.swift in Sources */,
+				FC9E5CD41CB8A66F00981D88 /* MyReviewCell.swift in Sources */,
+				FCD5131B1CB5943100A13A10 /* ReviewTableViewController.swift in Sources */,
+				FC19D95F1CCE4D5A00376BBE /* NewsfeedTableViewController.swift in Sources */,
+				7F6FA94B1CA2152600F37D52 /* RegistrationViewController.swift in Sources */,
+				7FDCC6781CB4C70300A9806E /* DiscussViewController.swift in Sources */,
 				7F568C5E1CA04B4B001E837D /* AppDelegate.swift in Sources */,
+				7DD129B81CDAA910003C72E9 /* UpdateUserInfoViewController.swift in Sources */,
+				845580ED1CB5CFA900AD3360 /* ReviewTableViewCell.swift in Sources */,
 				7F568C661CA04B4B001E837D /* iGDB.xcdatamodeld in Sources */,
+				7FDCC67A1CB557B100A9806E /* CommentsDetailViewController.swift in Sources */,
+				7D7D45151CA34E52000F8F6A /* AccountDetailsViewController.swift in Sources */,
+				7F6FA9451CA1B01100F37D52 /* LogInRegistrationViewController.swift in Sources */,
+				FC91CABC1CB332870016BBF9 /* RatingControl.swift in Sources */,
+				7F6FA9491CA212FB00F37D52 /* MyTabBarController.swift in Sources */,
+				7F6FA94D1CA2244100F37D52 /* SettingsTableViewController.swift in Sources */,
+				FC19D95D1CCE4D1F00376BBE /* CardCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,10 +357,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/iGDB",
+				);
 				INFOPLIST_FILE = iGDB/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cs378.iGDB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -252,10 +374,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/iGDB",
+				);
 				INFOPLIST_FILE = iGDB/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cs378.iGDB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -278,6 +406,7 @@
 				7F568C711CA04B4B001E837D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

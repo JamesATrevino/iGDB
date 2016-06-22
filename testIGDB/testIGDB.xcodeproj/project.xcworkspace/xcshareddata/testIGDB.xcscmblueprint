@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "E7ADA70CD669B8366B2C6B7EE2D70488A13AD672",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "E7ADA70CD669B8366B2C6B7EE2D70488A13AD672" : 0,
+    "EB45E20655D4C7FA7FDFA09D207A6109E48255A8" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "24A83250-D463-43E1-B741-803C79BC4021",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "E7ADA70CD669B8366B2C6B7EE2D70488A13AD672" : "iGDB\/",
+    "EB45E20655D4C7FA7FDFA09D207A6109E48255A8" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "testIGDB",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "testIGDB\/testIGDB.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/JamesATrevino\/iGDB.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E7ADA70CD669B8366B2C6B7EE2D70488A13AD672"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/marktheperson\/mygithubpage.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "EB45E20655D4C7FA7FDFA09D207A6109E48255A8"
+    }
+  ]
+}
